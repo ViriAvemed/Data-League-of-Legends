@@ -1,8 +1,5 @@
 # League of Leguends 
 ## The best champions
-<img src="https://giphy.com/embed/26gYOdBrT3MKcTj3O">
-
-
 
 - ¿Quiénes son los principales usuarios de producto?
 
@@ -26,6 +23,7 @@ El producto está diseñado a partir de las necesidades de nuestros usuarios, qu
 
 Aunque la página de League of Leguends muestra toda la información sobre los campeones, los usuarios reportaron la necesidad de vizualizar los atributos de los campeones de una forma más concreta y accesible, ya que la página tiene como objetivo documentar al jugador y no proporcionarle información ágil para crear de manera inmediata su estrategia de juego.
 
+
 ### Historias de usuario
 
 1. Al ingresar a la página deseo:
@@ -33,37 +31,12 @@ Aunque la página de League of Leguends muestra toda la información sobre los c
     - Ver los mejores 10 atributos de los campeones de League of Leguends.
     - Ver a los 10 mejores campeones con base en el atributo filtrado.
 
+
 <!-- ### Diseño de la Interfaz de Usuario -->
 
 #### Prototipo de baja fidelidad
 
 En este momento del proyecto nos encontramos testeando nuestro primer prototipo [(ver aqui)](https://marvelapp.com/415d1h8) de baja fidelidad en la aplicación Marvel, con el fin de conocer si cumple con las necesidades del usuario.
-
-A continuación se muestran las pantallas para el prototipo de baja fidelidad:
-La primera pantalla es mostrar el logo de LoL con el nombre específico de nuestro producto.
-
-<img src="src/IMG/Primera.JPG">
-
-La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atributo o por nombre de campeón.
-
-<img src="src/IMG/Segunda vista.JPG">
-
-En la tercera vista se muestra el menu desplegable del filtrado para que el usuario seleccione el que sea de su interés.
-
-<img src="src/IMG/Tercera vista.JPG">
-
-Por útilmo se muestran 2 opciones para presentar la información del filtrado, ya sea en tarjetas, como se muestra a continuación.
-
-<img src="src/IMG/Cuarta vista.jpg">
-
-O en forma de tabla:
-
-<img src="src/IMG/Cuaarta.JPG">
-
-En caso de que el usuario desee visualizar alguna búsqueda por nombre, se propone la siguiente presentación:
-
-<img src="src/IMG/por nombre.jpeg">
-
 
 <!-- #### Prototipo de alta fidelidad
 
@@ -258,6 +231,7 @@ implementadas en el archivo `data.js`.
 Antes de empezar a escribir código, debes definir qué deberá hacer el producto
 en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
 pueden ayudar: -->
+
 
 <!-- Cuando ya estés lista para codear, te sugerimos empezar de esta manera: -->
 
