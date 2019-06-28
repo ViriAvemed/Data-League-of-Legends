@@ -7,24 +7,30 @@ Para conocer cuáles son los principales usuarios de nuestra producto, fue neces
 
 - ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-Los objetivos de los usuarios es consultar en una app los atributos que ellos consideran más relevantes de los campeones de manera práctica y ágil al momento de diseñar su estrategia de juego
+Los objetivos de los usuarios es consultar en una app los atributos que ellos consideran más relevantes de los campeones de manera práctica al momento de diseñar su estrategia de juego. 
 
 - ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+
+Los usuarios reportan que la información que desean visualizar en la interfaz son los mejores atributos de los 10 mejores campeones en forma de tarjetas.
+
 - ¿Cuándo utilizan o utilizarían el producto?
+
+Crear una estrategia de juego en Lol es una tarea compleja, para diseñarla es necesario conocer los atributos de los mejores campeones, con el fin de tener mayores posibilidades de ganar la partida, por tal razón, los usuarios utilizarían nuestra aplicación al momento en el que deseen conocer rápidamente los atributos de los campeones para crear una mejor estrategia de juego.
 
 ### Definición del producto
 
-Para iniciar el proceso de diseño del proyecto fue necesaria la aplicación que cuestionarios que permitieran conocer cuáles eran las necesidades de nuestros usuarios y cómo deseaban visualizar el contenido. Bajo este contexto los usuarios solicitaron que los datos se mostrarán en una sola pantalla, con el fin de que la búsqueda fuera ágil y eficaz.
+El producto está diseñado a partir de las necesidades de nuestros usuarios, quienes solicitaron que los datos se mostrarán en una sola pantalla, con el fin de que la búsqueda fuera ágil y eficaz, ya que consideran que las páginas que hoy existen son muy engorrosas.
 
 Aunque la página de League of Leguends muestra toda la información sobre los campeones, los usuarios reportaron la necesidad de vizualizar los atributos de los campeones de una forma más concreta y accesible, ya que la página tiene como objetivo documentar al jugador y no proporcionarle información ágil para crear de manera inmediata su estrategia de juego.
 
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tu usuario, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Asegúrate de incluir una definición
-de terminado (_definition of done_) para cada una.
+1. Al ingresar a la página deseo:
+
+    - Ver los mejores 10 atributos de los campeones de League of Leguends.
+    - Ver a los 10 mejores campeones con base en el atributo filtrado.
+
 
 <!-- ### Diseño de la Interfaz de Usuario -->
 
