@@ -49,11 +49,11 @@ La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atribu
 
 En la tercera vista se muestra el menu desplegable del filtrado para que el usuario seleccione el que sea de su interés.
 
-<img src="src/IMG/Tercera vista.jpg">
+<img src="src/IMG/Tercera vista.JPG">
 
 Por útilmo se muestran 2 opciones para presentar la información del filtrado, ya sea en tarjetas, como se muestra a continuación.
 
-<img src="src/IMG/Cuarta vista.JPG">
+<img src="src/IMG/Cuarta vista.jpg">
 
 O en forma de tabla:
 
