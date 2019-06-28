@@ -23,14 +23,12 @@ El producto está diseñado a partir de las necesidades de nuestros usuarios, qu
 
 Aunque la página de League of Leguends muestra toda la información sobre los campeones, los usuarios reportaron la necesidad de vizualizar los atributos de los campeones de una forma más concreta y accesible, ya que la página tiene como objetivo documentar al jugador y no proporcionarle información ágil para crear de manera inmediata su estrategia de juego.
 
-
 ### Historias de usuario
 
 1. Al ingresar a la página deseo:
 
     - Ver los mejores 10 atributos de los campeones de League of Leguends.
     - Ver a los 10 mejores campeones con base en el atributo filtrado.
-
 
 <!-- ### Diseño de la Interfaz de Usuario -->
 
@@ -41,6 +39,7 @@ En este momento del proyecto nos encontramos testeando nuestro primer prototipo 
 A continuación se muestran las pantallas para el prototipo de baja fidelidad:
 La primera pantalla es mostrar el logo de LoL con el nombre específico de nuestro producto.
 
+<<<<<<< HEAD
 <img src="src/IMG/Primera.jpg">
 
 La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atributo o por nombre de campeón.
@@ -50,6 +49,17 @@ La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atribu
 En la tercera vista se muestra el menu desplegable del filtrado para que el usuario seleccione el que sea de su interés.
 
 <img src="src/IMG/Tercera vista.jpg">
+=======
+<img src="src/IMG/Primera.JPG">
+
+La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atributo o por nombre de campeón.
+
+<img src="src/IMG/Segunda vista.JPG">
+
+En la tercera vista se muestra el menu desplegable del filtrado para que el usuario seleccione el que sea de su interés.
+
+<img src="src/IMG/Tercera vista.JPG">
+>>>>>>> upstream-Ana
 
 Por útilmo se muestran 2 opciones para presentar la información del filtrado, ya sea en tarjetas, como se muestra a continuación.
 
@@ -57,14 +67,21 @@ Por útilmo se muestran 2 opciones para presentar la información del filtrado, 
 
 O en forma de tabla:
 
+<<<<<<< HEAD
 <img src="src/IMG/Cuaarta.jpg">
+=======
+<img src="src/IMG/Cuaarta.JPG">
+>>>>>>> upstream-Ana
 
 En caso de que el usuario desee visualizar alguna búsqueda por nombre, se propone la siguiente presentación:
 
 <img src="src/IMG/por nombre.jpeg">
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream-Ana
 <!-- #### Prototipo de alta fidelidad
 
 Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
@@ -258,7 +275,6 @@ implementadas en el archivo `data.js`.
 Antes de empezar a escribir código, debes definir qué deberá hacer el producto
 en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
 pueden ayudar: -->
-
 
 <!-- Cuando ya estés lista para codear, te sugerimos empezar de esta manera: -->
 
