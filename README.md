@@ -57,11 +57,11 @@ Por útilmo se muestran 2 opciones para presentar la información del filtrado, 
 
 O en forma de tabla:
 
-<img src="src/IMG/Cuaarta.JPG">
+<img src="src/IMG/Cuaarta.jpg">
 
 En caso de que el usuario desee visualizar alguna búsqueda por nombre, se propone la siguiente presentación:
 
-<img src="src/IMG/por nombre.jpeg">
+<img src="src/IMG/por nombre.jpg">
 
 
 
