@@ -36,10 +36,7 @@ Aunque la página de League of Leguends muestra toda la información sobre los c
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado sketches (boceto) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que realices y las subas a tu repositorio, y las menciones en tu
-`README.md`.
+En este momento del proyecto nos encontramos testeando nuestro primer prototipo [(ver aqui)](https://marvelapp.com/415d1h8) de baja fidelidad en la aplicación Marvel, con el fin de conocer si cumple con las necesidades del usuario.
 
 <!-- #### Prototipo de alta fidelidad
 
