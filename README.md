@@ -38,6 +38,33 @@ Aunque la página de League of Leguends muestra toda la información sobre los c
 
 En este momento del proyecto nos encontramos testeando nuestro primer prototipo [(ver aqui)](https://marvelapp.com/415d1h8) de baja fidelidad en la aplicación Marvel, con el fin de conocer si cumple con las necesidades del usuario.
 
+A continuación se muestran las pantallas para el prototipo de baja fidelidad:
+La primera pantalla es mostrar el logo de LoL con el nombre específico de nuestro producto.
+
+<img src="src/IMG/Primera.jpg">
+
+La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atributo o por nombre de campeón.
+
+<img src="src/IMG/Segunda vista.jpg">
+
+En la tercera vista se muestra el menu desplegable del filtrado para que el usuario seleccione el que sea de su interés.
+
+<img src="src/IMG/Tercera vista.jpg">
+
+Por útilmo se muestran 2 opciones para presentar la información del filtrado, ya sea en tarjetas, como se muestra a continuación.
+
+<img src="src/IMG/Cuarta vista.jpg">
+
+O en forma de tabla:
+
+<img src="src/IMG/Cuaarta.jpg">
+
+En caso de que el usuario desee visualizar alguna búsqueda por nombre, se propone la siguiente presentación:
+
+<img src="src/IMG/por nombre.jpeg">
+
+
+
 <!-- #### Prototipo de alta fidelidad
 
 Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
