@@ -41,11 +41,11 @@ En este momento del proyecto nos encontramos testeando nuestro primer prototipo 
 A continuación se muestran las pantallas para el prototipo de baja fidelidad:
 La primera pantalla es mostrar el logo de LoL con el nombre específico de nuestro producto.
 
-<img src="src/IMG/Primera.jpg">
+<img src="src/IMG/Primera.JPG">
 
 La segunda pantalla tiene como objetivo mostrar la opción de filtrar por atributo o por nombre de campeón.
 
-<img src="src/IMG/Segunda vista.jpg">
+<img src="src/IMG/Segunda vista.JPG">
 
 En la tercera vista se muestra el menu desplegable del filtrado para que el usuario seleccione el que sea de su interés.
 
@@ -53,11 +53,11 @@ En la tercera vista se muestra el menu desplegable del filtrado para que el usua
 
 Por útilmo se muestran 2 opciones para presentar la información del filtrado, ya sea en tarjetas, como se muestra a continuación.
 
-<img src="src/IMG/Cuarta vista.jpg">
+<img src="src/IMG/Cuarta vista.JPG">
 
 O en forma de tabla:
 
-<img src="src/IMG/Cuaarta.jpg">
+<img src="src/IMG/Cuaarta.JPG">
 
 En caso de que el usuario desee visualizar alguna búsqueda por nombre, se propone la siguiente presentación:
 
