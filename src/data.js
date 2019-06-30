@@ -1,8 +1,20 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+window.data = {
 
-const example = () => {
+filter data: (data,condition) => {
+  datachampion=data;
+
+
+
+
+
+
+
+
   return 'example';
 };
 
 window.example = example;
+
+
+
+}

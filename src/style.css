@@ -1,0 +1,67 @@
+body {
+
+    background-color: black;
+    margin: 0%;
+}
+
+.button-tirador, .button-soporte, .button-tanque {
+ background-color: black;
+ color: #CBC2B0;
+ border-color: #CBC2B0;   
+ font-family: Friz Quadrata;
+ text-align: inherit;
+ padding: 3%;
+ border: 0%;
+ margin: 0%;
+ font-size: 100%;
+}
+
+.imagen-tirador {
+
+    background-image: url("https://www.masterypoints.com/assets/img/lol/champion_icons/Jhin.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: inline;
+    text-align: inline;
+
+}
+
+.carta-tirador, .carta-soporte, .carta-tanque {
+border: 1px groove #CBC2B0;
+width: 5%;
+padding: .7%;
+float: left;
+margin: 1%;
+}
+
+.imagen-soporte {
+
+    background-image: url("https://www.masterypoints.com/assets/img/lol/champion_icons/Nautilus.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: inline;
+    text-align: inherit;
+
+}
+
+.imagen-tanque {
+
+    background-image: url("https://www.masterypoints.com/assets/img/lol/champion_icons/Sion.png" );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: inline;
+    text-align: inline;
+
+}
+
+.ataque-10 {
+
+    margin: 5%;
+    color: #CBC2B0;
+}
+
+#four-section{
+
+    margin: 3%;
+    float: inherit;
+}
