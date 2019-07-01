@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>The Best Champions</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,8 +11,36 @@
     <!-- <script src="./data/pokemon/pokemon.js"></script> -->
     <!-- <script src="./data/steam/steam.js"></script> -->
     <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
+     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-  </body>
-</html>
+
+    <!--Encabezado de la página-->
+    <header class="header">
+      <figure>
+        <img id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends">
+      </figure>
+      <h1>The Best Champions</h1>
+      <nav>
+        <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/">Jugar</a>
+        <a href="https://universe.leagueoflegends.com/es_MX/">Universo</a>
+      </nav>
+    </header>
+
+    <div>
+      <label for="champFilter">Los mejores campeones en </label>
+      <select name="championsFilter" id="champFilter">
+        <option value="attack">Ataque</option>
+        <option value="defending">Defensa</option>
+        <option value="difficulty">Dificultad</option>
+        <option value="magic">Magia</option>
+      </select>
+    </div>
+    <div>
+      <label for="seaForName">Buscar por nombre</label>
+      <input type="search" id="seaForName" placeholder="buscar">
+      <button>Buscar</button>
+    </div>
+
+    </body>
+  </html>
