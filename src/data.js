@@ -1,8 +1,27 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+window.data = {
 
-const example = () => {
-  return 'example';
+
+  championSearch: (data) => {
+    for(let i in data ){
+      console.log(data[i]["name"]);
+
+      console.log(data[i]["title"]);
+
+      console.log(data[i]["info"]['attack']);
+
+      console.log(data[i]["tags"][0]);
+      console.log(data[i]["tags"][1]);
+      
+
+      // if(i==="data"){
+      //
+      // }
+
+    }
+
+
+}
+
 };
 
-window.example = example;
+window.data=data;
