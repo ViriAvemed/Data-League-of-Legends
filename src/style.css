@@ -1,6 +1,6 @@
 body {
 
-    background-color: black;
+    /* background-color: black; */
     margin: 0%;
 }
 
@@ -74,7 +74,7 @@ margin: 1%;
     height: 100%;
     z-index: 9999;
     background: url(IMG/logo_lol.gif) 50% 50% no-repeat rgb(249,249,249);
-    opacity: .8;
+    opacity: .8; */
 
-
+/* 
 }
