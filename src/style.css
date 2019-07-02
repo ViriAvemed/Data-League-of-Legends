@@ -1,11 +1,17 @@
-.header a{
+.header {
   color: white;
   background-color: #121212;
-  display: flex;
 }
 
 #logo{
   width: 50px;
   height: 50px;
 
+}
+
+body{
+  background-image: url(./imagenes/fondolol5.png);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  margin: 0;
 }
