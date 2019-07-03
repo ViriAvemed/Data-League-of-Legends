@@ -16,6 +16,7 @@ result.forEach(element => {
     <p>${element.tags}</p>
     <p>${element.info.attack}</p>
     <p>${element.info.defense}</p>
+    
     <p>${element.info.magic}</p>
     <p>${element.info.difficulty}</p>
     <p>${element.stats.hp}</p>
