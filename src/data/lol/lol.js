@@ -159,6 +159,7 @@ var LOL = {
         attackspeedperlevel: 3.1
       }
     },
+    
     Alistar: {
       version: "6.24.1",
       id: "Alistar",

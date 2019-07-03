@@ -24,7 +24,6 @@ window.data ={
           }
           );
 
-
     }
   
     return (cardGeneral);
