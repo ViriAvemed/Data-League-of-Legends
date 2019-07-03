@@ -2,22 +2,40 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>The Best Champions</title>
+    <title>THE BEST CHAMPIOS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
 
   </head>
+
+
   <body>
 
-    <!--Encabezado de la página-->
-    <nav class="header">
-      <img id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends">
-      <h1>The Best Champions</h1>
-      <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/">Jugar</a>
-      <a href="https://universe.leagueoflegends.com/es_MX/">Universo</a>
-    </nav>
+  <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50">
+      <source src="https://universe-meeps.leagueoflegends.com/v1/assets/videos/shadow-isles-splashvideo.webm" type="video/ogg" style="margin:0;"/>
+  </video>
 
-    <!--Lista desplegable para filtrar y buscar campeones-->
-    <section>
+    <div class="header">
+      <img id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends">
+      <h1 style="display: inline;">THE BEST CHAMPIOS</h1>
+      <nav>
+      <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class="nounderline" >JUGAR</a>
+      <a href="https://universe.leagueoflegends.com/es_MX/"  class="nounderline" >UNIVERSO</a>
+      </nav>
+    </div>
+  <br>
+  <br>
+
+
+  <div>
+    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls></audio>
+    <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
+
+  </div>
+
+
+  <section>
       <label for="champFilter">Los mejores campeones en </label>
       <select name="championsFilter" id="champFilter">
         <option value="attack">Ataque</option>
@@ -33,7 +51,7 @@
       <button>Buscar</button>
     </section>
 
-    <div id="table"></div>
+
 
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
