@@ -2,9 +2,8 @@
 
 
 body {
-
     background-color: black;
-    margin: 5%;
+    margin: 0%%;
 }
 
 .button-tirador, .button-soporte, .button-tanque {
@@ -80,16 +79,15 @@ margin: 1%;
     opacity: .8;
 }
 
-.cardGen{
-    color: white;
-    border: #CBC2B0 1px solid;
+.cardChampion{
+    color: #ACA386;
     max-width:100%;
+    width:25%;
+    border:3px solid #ACA386;
     height:auto;
-    display:flex;
-    flex-wrap:wrap;
-    margin:5%;
-    padding:0%;
-    background:white;
+    margin-right:2%;
+    margin-bottom: 2%;
+    float:left;
  
     
 }
@@ -97,33 +95,35 @@ margin: 1%;
 .card-imagen{
     background:grey;
     display:flex;
-    margin:5%;
+    margin:0%;
     padding:0%;
-    border: 3px solid #CBC2B0;
     max-width:100%;
     height:auto;
     align:center;
-    float:right;
     background: grey;
-    
+    align:"middle";
+    float:left;
 }
 
 .card-text {
-    border:3px solid #CBC2B0;
     font-family: Friz Quadrata;
-    font-size:100%;
+    font-size:120%;
     max-width:100%;
-    text-align:left;
-    width:39%;
+    text-align:center;
+    width:100%;
     height:auto;
-    float:right;
-    background:green;
+    background:black;
+    margin:0%;
   
 
 }
 
 .card-atributos{
-    background:red;
+    text-align:"center";
+    background:black;
     column-count:3;
+    background:black;
+    width:100%;
+    margin:0%;
 }
 
