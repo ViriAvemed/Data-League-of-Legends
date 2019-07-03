@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>League of Leguends -The best champions-</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script type="text/javascript">
+  <title>THE BEST CHAMPIOS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
     $(window).load(function() {
         $(".loader").fadeOut("slow");
     });
@@ -18,13 +21,46 @@
 <body>
   <section class="loader"></section>
 
+  <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50">
+      <source src="https://universe-meeps.leagueoflegends.com/v1/assets/videos/shadow-isles-splashvideo.webm" type="video/ogg" style="margin:0;"/>
+  </video>
+
+    <div class="header">
+      <img id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends">
+      <h1 style="display: inline;">THE BEST CHAMPIOS</h1>
+      <nav>
+      <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class="nounderline" >JUGAR</a>
+      <a href="https://universe.leagueoflegends.com/es_MX/"  class="nounderline" >UNIVERSO</a>
+      </nav>
+    </div>
+  <br>
+  <br>
+
+
+  <div>
+    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls></audio>
+    <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
+
+  </div>
+
+
+  <section>
+      <label for="champFilter">Los mejores campeones en </label>
+      <select name="championsFilter" id="champFilter">
+        <option value="attack">Ataque</option>
+        <option value="defending">Defensa</option>
+        <option value="difficulty">Dificultad</option>
+        <option value="magic">Magia</option>
+      </select>
+    </section>
+
+    <section>
+      <label for="seaForName">Buscar por nombre</label>
+      <input type="search" id="seaForName" placeholder="buscar">
+      <button>Buscar</button>
+    </section>
+
   <div id="prueba" class="prueba"></div>
-
-
-
-
-
-
 
 
   <section id="section-three">
@@ -91,3 +127,7 @@
 </body>
 
 </html>
+
+
+
+    

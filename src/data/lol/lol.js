@@ -606,7 +606,7 @@ var LOL = {
       tags: ["Tank", "Fighter"],
       partype: "MP",
       stats: {
-        hp: 582.6,
+        hp:  582.6,
         hpperlevel: 95,
         mp: 267.2,
         mpperlevel: 40,
