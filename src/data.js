@@ -7,13 +7,20 @@ window.data ={
       let title = data[i]["title"];
       let info = data[i]["info"];
       let tags = data[i]["tags"];
+      let splash = data[i]["splash"];
+      let stats = data[i]["stats"];
 
+
+        
        cardGeneral.push(
          {
            name,
            title,
            info,
-           tags
+           tags,
+           splash,
+           stats
+
           }
           );
 

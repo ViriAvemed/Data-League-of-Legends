@@ -1,7 +1,7 @@
 body {
 
-    /* background-color: black; */
-    margin: 0%;
+    background-color: black;
+    margin: 5%;
 }
 
 .button-tirador, .button-soporte, .button-tanque {
@@ -27,7 +27,7 @@ body {
 }
 
 .carta-tirador, .carta-soporte, .carta-tanque {
-border: 1px groove #CBC2B0;
+border: 1px solid #CBC2B0;
 width: 5%;
 padding: .7%;
 float: left;
@@ -74,7 +74,32 @@ margin: 1%;
     height: 100%;
     z-index: 9999;
     background: url(IMG/logo_lol.gif) 50% 50% no-repeat rgb(249,249,249);
-    opacity: .8; */
+    opacity: .8;
+}
 
-/* 
+.cardGen{
+    color: white;
+    border: #CBC2B0 1px solid;
+
+    
+}
+
+.card-image{
+    display: block;
+    padding: auto;
+    margin: 1%;
+    border: 3px solid #CBC2B0;
+    
+    
+}
+
+.card-text {
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-imagen{
+    width: 5%;
+    height:5%;
+
 }
