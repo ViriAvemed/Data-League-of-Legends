@@ -1,11 +1,6 @@
 
 
 
-body {
-    background-color: black;
-    margin: 0%%;
-}
-
 .button-tirador, .button-soporte, .button-tanque {
  background-color: black;
  color: #CBC2B0;
@@ -125,5 +120,41 @@ margin: 1%;
     background:black;
     width:100%;
     margin:0%;
+    }
+
+.header {
+  color: #9d7f43;
+  background-color: #101416;
+  font-family: 'Gurajada', serif;
+  font-size: 19px;
+  border-bottom: 4px solid #262626;
+  align-content: center;
+
+}
+
+
+#logo{
+  width: 50px;
+  height: 50px;
+
+}
+
+#video_background {
+  position: absolute;
+  //bottom: 0px;
+ // right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.nounderline{
+  text-decoration:none;
+  color: #9d7f43;
+  font-family: 'Gurajada', serif;
+  font-size: 19px;
 }
 
