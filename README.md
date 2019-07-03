@@ -23,14 +23,12 @@ El producto está diseñado a partir de las necesidades de nuestros usuarios, qu
 
 Aunque la página de League of Leguends muestra toda la información sobre los campeones, los usuarios reportaron la necesidad de vizualizar los atributos de los campeones de una forma más concreta y accesible, ya que la página tiene como objetivo documentar al jugador y no proporcionarle información ágil para crear de manera inmediata su estrategia de juego.
 
-
 ### Historias de usuario
 
 1. Al ingresar a la página deseo:
 
     - Ver los mejores 10 atributos de los campeones de League of Leguends.
     - Ver a los 10 mejores campeones con base en el atributo filtrado.
-
 
 <!-- ### Diseño de la Interfaz de Usuario -->
 
@@ -258,7 +256,6 @@ implementadas en el archivo `data.js`.
 Antes de empezar a escribir código, debes definir qué deberá hacer el producto
 en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
 pueden ayudar: -->
-
 
 <!-- Cuando ya estés lista para codear, te sugerimos empezar de esta manera: -->
 
