@@ -28,37 +28,49 @@
     <div class="header">
       <img id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends">
       <h1 style="display: inline;">THE BEST CHAMPIOS</h1>
-      <nav>
       <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class="nounderline" >JUGAR</a>
       <a href="https://universe.leagueoflegends.com/es_MX/"  class="nounderline" >UNIVERSO</a>
-      </nav>
     </div>
   <br>
   <br>
 
 
   <div>
-    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls></audio>
+    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls ></audio>
     <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
 
   </div>
 
-
-  <section>
-      <label for="champFilter">Los mejores campeones en </label>
-      <select name="championsFilter" id="champFilter">
+  <div id="filtros" class="father">
+      <select name="championsFilter" id="champFilter" class="son">
+        <option selected value="0">Mejores Campeones</option>
         <option value="attack">Ataque</option>
         <option value="defending">Defensa</option>
         <option value="difficulty">Dificultad</option>
         <option value="magic">Magia</option>
       </select>
-    </section>
 
-    <section>
-      <label for="seaForName">Buscar por nombre</label>
-      <input type="search" id="seaForName" placeholder="buscar">
-      <button>Buscar</button>
-    </section>
+    <select name="fitralPorRol" id="filterRol" class="son">
+      <option selected value="0">Rol</option>
+      <option id="assassin" value="Asesino">Asesino</option>
+      <option id="magician" value="Mago">Mago</option>
+      <option id="fighter" value="Luchador">Luchador</option>
+      <option id="support" value="Soporte">Soporte</option>
+      <option id="tank" value="Tanque">Tanque</option>
+      <option id="shooter" value="Tirador">Tirador</option>
+    </select>
+
+    <select name="fitralPorRol" id="filterRol" class="son">
+      <option selected value="0">A-Z</option>
+      <option value="Asesino">Z-A</option>
+    </select>
+
+    <input type="search" id="seaForName" name="Buscar" placeholder="Nombre del campeón" class="son">
+    <button>Buscar</button>
+    </div>
+
+
+
 
   <div id="prueba" class="prueba"></div>
 
