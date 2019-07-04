@@ -34,6 +34,7 @@ result.forEach(element => {
     prueba.insertAdjacentHTML("beforeend",card);
 });
 
+
 let orderAZ = result.sort((a,b) =>{
 
 if (a.name > b.name){
