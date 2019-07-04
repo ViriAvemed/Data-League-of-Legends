@@ -2,6 +2,7 @@ body  {
   background-image: url("https://wallpapermemory.com/uploads/222/fiddlesticks-league-of-legends-background-hd-1600x768-172199.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size:cover;
 }
 
 .flip-card {
