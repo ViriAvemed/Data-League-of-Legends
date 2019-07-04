@@ -14,7 +14,7 @@ result.forEach(element => {
         <p>${element.title}</p>
         <p>${element.tags}</p>
     </div>  
-    <tr id="card-imagen class="card-imagen" align="middle"  ><img src="${element.splash}" width="100%" height="auto" </tr>
+    <tr id="card-imagen class="card-imagen" align="middle"><img src="${element.splash}" width="100%" height="auto" </tr>
     <div id "card-atributos" class="card-atributos">
         <p>attack ${element.info.attack}</p>
         <p>defense ${element.info.defense}</p>
