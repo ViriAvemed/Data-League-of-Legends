@@ -5,6 +5,8 @@ const prueba = document.getElementById('prueba');
 
 const result = window.data.championSearch(LOL.data);
 
+
+function volverpintar () {
   result.forEach(element => {
     card =`<div class="flip-card">
     <div class="flip-card-inner">
@@ -29,7 +31,27 @@ const result = window.data.championSearch(LOL.data);
     </div>`
     prueba.insertAdjacentHTML("beforeend", card);
   });
+}
 
+// let orderAZ = result.sort((a,b) =>{
+//
+// if (a.name > b.name){
+// return 1
+// }
+// return -1
+// });
+// console.log(orderAZ);
+
+const boton = document.getElementById("eliminar");
+function borrar (){
+  document.getElementById("prueba").innerHTML=""
+}
+boton.addEventListener("click",borrar);
+
+
+const boton2 = document.getElementById("seaForName");
+
+boton2.addEventListener("click",volverpintar);
 
 
 
@@ -67,20 +89,3 @@ const result = window.data.championSearch(LOL.data);
 // });
 //
 //
-// let orderAZ = result.sort((a,b) =>{
-//
-// if (a.name > b.name){
-// return 1
-// }
-// return -1
-// });
-// console.log(orderAZ);
-
-const boton = document.getElementById("eliminar");
-function borrar (){
-  document.getElementById("prueba").innerHTML=""
-}
-boton.addEventListener("click",borrar);
-
-const botonBuscar= document.getElementById("seaForName");
-botonBuscar.addEventListener("click",championSearch);
