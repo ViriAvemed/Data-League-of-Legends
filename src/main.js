@@ -6,6 +6,7 @@ const prueba = document.getElementById('prueba');
 const result = window.data.championSearch(LOL.data);
 
 
+
 function volverpintar () {
   result.forEach(element => {
     card =`<div class="flip-card">
@@ -23,12 +24,10 @@ function volverpintar () {
      <p class="p" >Regen. de vida:  ${element.stats.hpregen} ~~ Vida por nivel:  ${element.stats.hpperlevel}</p>
     <p  class="p" >Vel de mov.:  ${element.stats.movespeed} ~~ Vel. de ataque:  ${element.stats.attackspeedoffset}</p>
     <p id="attackdamage" class="p" >Daño de ataque:  ${element.stats.attackdamage}</p>
-    
-   
-    
     </div>
     </div>
     </div>`
+
     prueba.insertAdjacentHTML("beforeend", card);
   });
 }
@@ -60,4 +59,4 @@ boton2.addEventListener("click",volverpintar);
 
 
 
-//
+
