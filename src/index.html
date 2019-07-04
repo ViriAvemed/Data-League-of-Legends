@@ -21,37 +21,25 @@
 <body>
   <section class="loader"></section>
 
-  <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50">
-      <source src="https://universe-meeps.leagueoflegends.com/v1/assets/videos/shadow-isles-splashvideo.webm" type="video/ogg" style="margin:0;"/>
-  </video>
-
     <div class="header">
-      <img id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends">
-      <h1 style="display: inline;">THE BEST CHAMPIOS</h1>
-      <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class="nounderline" >JUGAR</a>
-      <a href="https://universe.leagueoflegends.com/es_MX/"  class="nounderline" >UNIVERSO</a>
+      <img style="float:left;" id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends" >
+      <h1 style="text-align:center;" >LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
     </div>
-  <br>
-  <br>
-
-
-  <div>
-    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls ></audio>
-    <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
-
-  </div>
 
   <div id="filtros" class="father">
+    <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class="son" >JUGAR</a>
+    <a href="https://universe.leagueoflegends.com/es_MX/"  class="son" >UNIVERSO</a>
+
       <select name="championsFilter" id="champFilter" class="son">
-        <option selected value="0">Mejores Campeones</option>
-        <option value="attack">Ataque</option>
-        <option value="defending">Defensa</option>
-        <option value="difficulty">Dificultad</option>
-        <option value="magic">Magia</option>
+        <option selected value="0">MEJORES CAMPEONES</option>
+        <option value="attack" id="ataque">Ataque</option>
+        <option value="defending" id="defensa">Defensa</option>
+        <option value="difficulty" id="dificultad">Dificultad</option>
+        <option value="magic" id="magia">Magia</option>
       </select>
 
     <select name="fitralPorRol" id="filterRol" class="son">
-      <option selected value="0">Rol</option>
+      <option selected value="0">ROL</option>
       <option id="assassin" value="Asesino">Asesino</option>
       <option id="magician" value="Mago">Mago</option>
       <option id="fighter" value="Luchador">Luchador</option>
@@ -66,58 +54,26 @@
     </select>
 
     <input type="search" id="seaForName" name="Buscar" placeholder="Nombre del campeón" class="son">
-    <button>Buscar</button>
+    <button>BUSCAR</button>
+
+    <button id="eliminar">LIMPIAR</button>
     </div>
+  <br>
+  <br>
+  <br>
+
+<!--  <div>-->
+<!--    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls ></audio>-->
+<!--    <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>-->
+<!--  </div>-->
+
+
+
+  <div id="prueba"></div>
 
 
 
 
-  <div id="prueba" class="prueba"></div>
-
-
-  <section id="section-three">
-
-    <section class="carta-tirador">
-      <section class="imagen-tirador">
-
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section><button id="button-tirador" class="button-tirador">Tirador</button>
-        </section>
-      </section>
-    </section>
-
-
-    <section class="carta-soporte">
-
-      <section class="imagen-soporte">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section><button id="button-soporte" class="button-soporte">Soporte</button>
-        </section>
-      </section>
-    </section>
-
-    <section class="carta-tanque">
-
-      <section class="imagen-tanque">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section><button id="button-tanque" class="button-tanque">Tanque</button>
-        </section>
-      </section>
-    </section>
-  </section>
   <br>
   <br>
   <br>
