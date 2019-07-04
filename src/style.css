@@ -50,6 +50,7 @@ body  {
   background-color: #030814;
   color: white;
   transform: rotateY(180deg);
+  border-radius: 5px;
 }
 .p{
   margin:0 10px 0 30px;
@@ -63,101 +64,6 @@ body  {
 
 
 
-
-
-/*FIN DE PRUEBA*/
-/*.card {*/
-/*  !* Add shadows to create the "card" effect *!*/
-/*  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
-/*  transition: 0.3s;*/
-/*}*/
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-}
-
-/* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 5px 0 0;
-}
-
-
-
-
-.button-tirador, .button-soporte, .button-tanque {
- background-color: black;
- color: #CBC2B0;
- border-color: #CBC2B0;
- font-family: Friz Quadrata;
- text-align: inherit;
- padding: 3%;
- border: 0%;
- margin: 0%;
- font-size: 100%;
-}
-
-.imagen-tirador {
-
-    background-image: url("https://www.masterypoints.com/assets/img/lol/champion_icons/Jhin.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: inline;
-    text-align: inline;
-
-}
-
-.carta-tirador, .carta-soporte, .carta-tanque {
-border: 1px solid #CBC2B0;
-width: 5%;
-padding: .7%;
-float: left;
-margin: 1%;
-}
-
-.imagen-soporte {
-
-    background-image: url("https://www.masterypoints.com/assets/img/lol/champion_icons/Nautilus.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inline;
-    text-align: inherit;
-
-}
-
-.imagen-tanque {
-
-    background-image: url("https://www.masterypoints.com/assets/img/lol/champion_icons/Sion.png" );
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inline;
-    text-align: inline;
-
-}
-
-.ataque-10 {
-
-    margin: 5%;
-    color: #CBC2B0;
-}
-
-#four-section{
-
-    margin: 3%;
-    float: inherit; 
-}
-
 .loader {
     position: fixed;
     left: 0px;
@@ -169,53 +75,6 @@ margin: 1%;
     opacity: .8;
 }
 
-.cardChampion{
-    color: #ACA386;
-    max-width:100%;
-    width:25%;
-    border:3px solid #ACA386;
-    height:auto;
-    margin-right:2%;
-    margin-bottom: 2%;
-    float:left;
- 
-    
-}
-
-.card-imagen{
-    background:grey;
-    display:flex;
-    margin:0%;
-    padding:0%;
-    max-width:100%;
-    height:auto;
-    align:center;
-    background: grey;
-    align:"middle";
-    float:left;
-}
-
-.card-text {
-    font-family: Friz Quadrata;
-    font-size:120%;
-    max-width:100%;
-    text-align:center;
-    width:100%;
-    height:auto;
-    background:black;
-    margin:0%;
-  
-
-}
-
-.card-atributos{
-    text-align:"center";
-    background:black;
-    column-count:3;
-    background:black;
-    width:100%;
-    margin:0%;
-    }
 
 .header {
   color: white;
@@ -254,4 +113,4 @@ margin: 1%;
   font-size: 25px;
 }
 
-}
+
