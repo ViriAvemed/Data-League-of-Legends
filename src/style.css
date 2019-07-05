@@ -3,6 +3,7 @@ body  {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
+
 }
 
 .flip-card {
@@ -17,10 +18,12 @@ body  {
   font-size: small;
 
 }
+
 .apodo{
   color: #84683d;
   font-family: Friz Quadrata;
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -101,6 +104,7 @@ body  {
   background-color: #030814;
   font-family: 'Gurajada', serif;
 }
+
 
 .son{
   display:inline-block;

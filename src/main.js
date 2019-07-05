@@ -7,12 +7,23 @@ const boton2 = document.getElementById("seaForName");
 const boton = document.getElementById("eliminar");
 
 const result = window.data.championSearch(LOL.data);
+const boton = document.getElementById("eliminar");
+const boton2 = document.getElementById("seaForName");
+const change1 = document.getElementById('champFilter');
+const change2 = document.getElementById('filterRol');
+const change3 = document.getElementById('filterRol2');
 
 
+<<<<<<< HEAD
 //Función para puntar todas las tarjetas con las propiedades seleccionadas en el data.js
 let volverpintar = () => {
   result.forEach(element => {
       
+=======
+
+const volverpintar =(results) => {
+  results.forEach(element => {
+>>>>>>> 5e238b478ffdc5377e1ed95443653a621195d3a9
     card =`<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -34,6 +45,7 @@ let volverpintar = () => {
 
     prueba.insertAdjacentHTML("beforeend", card);
   });
+<<<<<<< HEAD
 }
 
 
@@ -56,6 +68,15 @@ let borrar = () =>{
 
 //Detonar botón para borrar tarjetas
 boton.addEventListener("click",borrar);
+=======
+  return volverpintar;
+};
+
+
+const borrar = () =>{
+  document.getElementById("prueba").innerHTML=""
+};
+>>>>>>> 5e238b478ffdc5377e1ed95443653a621195d3a9
 
 //Detonar botón para puntar todas las tarjetas
 boton2.addEventListener("click",volverpintar);
@@ -83,19 +104,64 @@ borrar();
 attack.addEventListener("change",printattack);
 
 
+<<<<<<< HEAD
+=======
+const orden = () =>{
+  let val=change3.value;
+  let newArray;
+>>>>>>> 5e238b478ffdc5377e1ed95443653a621195d3a9
 
+  borrar();
+  const result1 = window.data.championSearch(LOL.data);
+  if(val==='D'){
+    newArray=result1.reverse()
+    volverpintar(newArray);
+  }else if(val==='A'){
+    newArray=result1;
+    volverpintar(newArray);
+  }
 
+};
 
+const buscarNombre = () =>{
 
+<<<<<<< HEAD
 //Función para filtrar campeones por mayor defensa
 let defense = result.filter(result => result.info.defense >=9);
 // console.log (defense);
+=======
+  let valorabuscar = document.getElementById('buscName').value;
+  let newArray = result.filter(function (el) {
+    return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
+  });
+  borrar();
+  volverpintar(newArray);
 
+};
+>>>>>>> 5e238b478ffdc5377e1ed95443653a621195d3a9
 
+const rol = () =>{
+  let valorabuscar = document.getElementById('filterRol').value;
+  let newArray = result.filter(function (el) {
+    return el.tags.indexOf(valorabuscar) !== -1;
+
+<<<<<<< HEAD
 //Función para filtrar campeones por mayor magia
 let magic = result.filter(result => result.info.magic ===10);
 // console.log (magic);
+=======
+  });
+  borrar();
+  volverpintar(newArray);
+>>>>>>> 5e238b478ffdc5377e1ed95443653a621195d3a9
 
+};
+
+boton.addEventListener("click",borrar);
+boton2.addEventListener("click",buscarNombre);
+// change1.addEventListener("change",mejoresCampeones);
+change2.addEventListener("change",rol);
+change3.addEventListener("change",orden);
 
 //Función para filtrar campeones por mayor dificultad
 let difficulty = result.filter (result => result.info.difficulty ===10);
