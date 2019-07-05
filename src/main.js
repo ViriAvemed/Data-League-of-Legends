@@ -1,22 +1,15 @@
 
+// Llamado de div para puntar las tarjetas
 const prueba = document.getElementById('prueba');
-
-const result = window.data.championSearch(LOL.data);
+const boton2 = document.getElementById('seaForName');
 const boton = document.getElementById("eliminar");
-const boton2 = document.getElementById("seaForName");
-//const change1 = document.getElementById('champFilter');
+const result = window.data.championSearch(LOL.data);
 const change2 = document.getElementById('filterRol');
 const change3 = document.getElementById('filterRol2');
 
 
-<<<<<<< HEAD
 const volverpintar =(results) => {
   results.forEach(element => {
-=======
-
-function volverpintar () {
-  result.forEach(element => {
->>>>>>> 7c67ce3af5e1948b798a68fb0297f3095fd44e02
     card =`<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -42,55 +35,67 @@ function volverpintar () {
 };
 
 
-const borrar = () =>{
+
+//Función para borrar tajetas de todos los campeones
+let borrar = () =>{
   document.getElementById("prueba").innerHTML=""
-};
+}
 
 
 
 const orden = () =>{
-  let val=change3.value;
-  let newArray;
 
-  borrar();
-  const result1 = window.data.championSearch(LOL.data);
-  if(val==='D'){
-    newArray=result1.reverse();
+    let val=change3.value;
+    let newArray;
+    borrar();
+    const result1 = window.data.championSearch(LOL.data);
+    if(val==='D'){
+      newArray=result1.reverse()
+      volverpintar(newArray);
+    }else if(val==='A'){
+      newArray=result1;
+      volverpintar(newArray);
+    }
+  
+  };
+
+
+  const buscarNombre = () =>{
+
+    let valorabuscar = document.getElementById('buscName').value;
+    let newArray = result.filter(function (el) {
+      return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
+    });
+    borrar();
     volverpintar(newArray);
-  }else if(val==='A'){
-   newArray=result1;
+  };
+
+  const rol = () =>{
+    let valorabuscar = document.getElementById('filterRol').value;
+    let newArray = result.filter(function (el) {
+      return el.tags.indexOf(valorabuscar) !== -1;
+  
+    });
+    borrar();
     volverpintar(newArray);
-  }
-};
+  
+  };
 
-const buscarNombre = () =>{
 
-  let valorabuscar = document.getElementById('buscName').value;
-  let newArray = result.filter(function (el) {
-    return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
-  });
-  borrar();
-  volverpintar(newArray);
+// Filtra a los campeones por mejor atributo
+let bestAttack=document.getElementById("champFilter");
+const printattack = () =>{
+    let atributos = bestAttack.value;
+    let attack=result.filter (result => result.info[atributos] >9);
+    borrar();
+    volverpintar(attack);
 
-};
-
-const rol = () =>{
-  let valorabuscar = document.getElementById('filterRol').value;
-  let newArray = result.filter(function (el) {
-    return el.tags.indexOf(valorabuscar) !== -1;
-
-  });
-  borrar();
-  volverpintar(newArray);
 };
 
 
-
-<<<<<<< HEAD
+bestAttack.addEventListener("change",printattack);//Detonar botón para puntar todas las tarjetas
+boton2.addEventListener("click",volverpintar);//Detonar botón para borrar tarjetas
 boton.addEventListener("click",borrar);
 boton2.addEventListener("click",buscarNombre);
-//change1.addEventListener("change",);
 change2.addEventListener("change",rol);
 change3.addEventListener("change",orden);
-=======
->>>>>>> 7c67ce3af5e1948b798a68fb0297f3095fd44e02
