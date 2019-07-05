@@ -9,8 +9,14 @@ const change2 = document.getElementById('filterRol');
 const change3 = document.getElementById('filterRol2');
 
 
+<<<<<<< HEAD
 const volverpintar =(results) => {
   results.forEach(element => {
+=======
+
+function volverpintar () {
+  result.forEach(element => {
+>>>>>>> 7c67ce3af5e1948b798a68fb0297f3095fd44e02
     card =`<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -29,6 +35,7 @@ const volverpintar =(results) => {
     </div>
     </div>
     </div>`
+
     prueba.insertAdjacentHTML("beforeend", card);
   });
   return volverpintar;
@@ -79,8 +86,11 @@ const rol = () =>{
 
 
 
+<<<<<<< HEAD
 boton.addEventListener("click",borrar);
 boton2.addEventListener("click",buscarNombre);
 //change1.addEventListener("change",);
 change2.addEventListener("change",rol);
 change3.addEventListener("change",orden);
+=======
+>>>>>>> 7c67ce3af5e1948b798a68fb0297f3095fd44e02
