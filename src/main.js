@@ -11,6 +11,7 @@ const change2 = document.getElementById('filterRol');
 const change3 = document.getElementById('filterRol2');
 
 
+
 const volverpintar =(results) => {
   results.forEach(element => {
     card =`<div class="flip-card">
@@ -31,6 +32,7 @@ const volverpintar =(results) => {
     </div>
     </div>
     </div>`
+
     prueba.insertAdjacentHTML("beforeend", card);
   });
   return volverpintar;
@@ -86,6 +88,4 @@ boton2.addEventListener("click",buscarNombre);
 // change1.addEventListener("change",mejoresCampeones);
 change2.addEventListener("change",rol);
 change3.addEventListener("change",orden);
-
-
 
