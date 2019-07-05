@@ -12,8 +12,8 @@ const change3 = document.getElementById('filterRol2');
 
 
 
-const volverpintar =(results) => {
-  results.forEach(element => {
+const volverpintar =(result) => {
+  result.forEach(element => {
     card =`<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">

@@ -8,7 +8,7 @@ body  {
 
 }
 .encabezado{
-color:#D4AF37;
+color:#90723B;
 text-align:center;
 font-family:Friz Quadrata;
 height:20%;
@@ -123,7 +123,7 @@ width:100%;
   display:inline-block;
   padding: 0 10px 0 0;
   margin: 0 50px 0 0;
-  background-color: #030814;
+  background-color: black;
   border: none;
   text-decoration:none;
   color: #9d7f43;
