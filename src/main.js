@@ -3,7 +3,7 @@
 
 // Llamado de div para puntar las tarjetas
 const prueba = document.getElementById('prueba');
-const boton2 = document.getElementById("seaForName");
+const boton2 = document.getElementById('seaForName');
 const boton = document.getElementById("eliminar");
 const result = window.data.championSearch(LOL.data);
 const change1 = document.getElementById('champFilter');
@@ -50,7 +50,6 @@ let borrar = () =>{
 const orden = () =>{
     let val=change3.value;
     let newArray;
-  
     borrar();
     const result1 = window.data.championSearch(LOL.data);
     if(val==='D'){
@@ -73,7 +72,6 @@ const orden = () =>{
     });
     borrar();
     volverpintar(newArray);
-  
   };
 
 
@@ -102,44 +100,15 @@ change3.addEventListener("change",orden);
 
 
 
+// Filtra a los campeones por mejor atributo
+let bestAttack=document.getElementById("champFilter")
+const printattack = () =>{
+    let atributos = bestAttack.value;
+    let attack=result.filter (result => result.info[atributos] >9);
+    borrar();
+    volverpintar(attack);
 
-//Función para filtrar campeones por mayor ataque
-
-let attack=document.getElementById("champFilter").value;
-let printattack=() =>{
-    let newarray = result.filter (result => result.info.attack ==="10");
-    volverpintar(newarray);
-// console.log(printattack);
-borrar();
-volverpintar(newArray);
-};
+}
 
 
-attack.addEventListener("change",printattack);
-
-
-
-
-//Función para filtrar campeones por mayor dificultad
-let difficulty = result.filter (result => result.info.difficulty ===10);
-// console.log (difficulty);
-
-//Función para filtrar campeones por mayor defensa
-let defense = result.filter(result => result.info.defense >=9);
-// console.log (defense);
-
-//Función para filtrar campeones por mayor magia
-let magic = result.filter(result => result.info.magic ===10);
-// console.log (magic);
-
-
-
-// //Función para ordenar de la A a la Z
-// let orderAZ = result.sort((a,b) =>{
-
-// if (a.name > b.name){
-// return 1
-// }
-// return -1
-// });
-// // console.log(orderAZ);
+bestAttack.addEventListener("change",printattack);
