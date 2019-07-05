@@ -1,12 +1,10 @@
-// let cardGeneral= document.getElementById("cardGeneral");
-// cardGeneral.insertAdjacentHTML("afterbegin",  `<section id="prueba"></section>`);
 
 const prueba = document.getElementById('prueba');
 
 const result = window.data.championSearch(LOL.data);
 const boton = document.getElementById("eliminar");
 const boton2 = document.getElementById("seaForName");
-const change1 = document.getElementById('champFilter');
+//const change1 = document.getElementById('champFilter');
 const change2 = document.getElementById('filterRol');
 const change3 = document.getElementById('filterRol2');
 
@@ -50,13 +48,12 @@ const orden = () =>{
   borrar();
   const result1 = window.data.championSearch(LOL.data);
   if(val==='D'){
-    newArray=result1.reverse()
+    newArray=result1.reverse();
     volverpintar(newArray);
   }else if(val==='A'){
-    newArray=result1;
+   newArray=result1;
     volverpintar(newArray);
   }
-
 };
 
 const buscarNombre = () =>{
@@ -78,14 +75,12 @@ const rol = () =>{
   });
   borrar();
   volverpintar(newArray);
-
 };
+
+
 
 boton.addEventListener("click",borrar);
 boton2.addEventListener("click",buscarNombre);
-// change1.addEventListener("change",mejoresCampeones);
+//change1.addEventListener("change",);
 change2.addEventListener("change",rol);
 change3.addEventListener("change",orden);
-
-
-
