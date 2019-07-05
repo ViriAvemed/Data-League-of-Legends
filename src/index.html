@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THE BEST CHAMPIOS</title>
+  <title>THE BEST CHAMPIONS</title>
     <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
@@ -21,9 +21,10 @@
 <body>
   <section class="loader"></section>
 
+    <div class="container"></div>
     <div class="header">
       <img style="float:left;" id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends" >
-      <h1 style="text-align:center;" >LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
+      <h1 class="encabezado">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
     </div>
 
 
@@ -38,7 +39,7 @@
       </select>
 
     <select name="fitralPorRol" id="filterRol" class="son">
-      <option selected value="0">ROL</option>
+      <option selected value="0">Rol</option>
       <option id="assassin" value="Assassin">Asesino</option>
       <option id="magician" value="Mage">Mago</option>
       <option id="fighter" value="Fighter">Luchador</option>
@@ -53,10 +54,9 @@
       <option value="D">Z-A</option>
     </select>
 
-    <input type="search" id="buscName" name="Buscar" placeholder="Nombre del campeón" class="son">
-    <button id="seaForName" >BUSCAR</button>
-
-    <button id="eliminar">LIMPIAR</button>
+    <input type="search" id="buscName" name="Buscar" class="nameOfChampion" placeholder="Nombre del campeón" class="son">
+    <button id="seaForName" class="btnsearch" >MOSTRAR CAMPEONES</button>
+    <button id="eliminar" class="btndelete">OCULTAR CAMPEONES</button>
     </div>
   <br>
   <br>
@@ -70,6 +70,7 @@
 
 
   <div id="prueba"></div>
+  <div id="bestattack"></div>
 
 
   </section>
