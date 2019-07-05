@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>THE BEST CHAMPIONS</title>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="pantalla.css">   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript">
     $(window).load(function() {
@@ -21,19 +23,20 @@
 <body>
   <section class="loader"></section>
 
-    <div class="container"></div>
+
     <div class="header">
       <img style="float:left;" id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends" >
       <h1 class="encabezado">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
     </div>
 
+    <section class="container">
 
   <div id="filtros" class="father">
 
       <select name="championsFilter" id="champFilter" class="son">
-        <option selected value="0">Mejores Campeones</option>
+        <option selected>Mejores Campeones</option>
         <option value="attack" id="ataque">Ataque</option>
-        <option value="defending" id="defensa">Defensa</option>
+        <option value="defense" id="defensa">Defensa</option>
         <option value="difficulty" id="dificultad">Dificultad</option>
         <option value="magic" id="magia">Magia</option>
       </select>
@@ -71,16 +74,21 @@
 
   <div id="prueba"></div>
   <div id="bestattack"></div>
-
-
+  <br>
+  <br>
+  <br>
+  <br>
   </section>
+  </section>
+
 
   <script src="./data/lol/lol.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 
+  <footer class="footer">Developers
 
-
+  </footer>
 
 </body>
 
