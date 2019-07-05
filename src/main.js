@@ -4,10 +4,15 @@
 const prueba = document.getElementById('prueba');
 
 const result = window.data.championSearch(LOL.data);
+const boton = document.getElementById("eliminar");
+const boton2 = document.getElementById("seaForName");
+const change1 = document.getElementById('champFilter');
+const change2 = document.getElementById('filterRol');
+const change3 = document.getElementById('filterRol2');
 
 
-function volverpintar () {
-  result.forEach(element => {
+const volverpintar =(results) => {
+  results.forEach(element => {
     card =`<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -23,41 +28,64 @@ function volverpintar () {
      <p class="p" >Regen. de vida:  ${element.stats.hpregen} ~~ Vida por nivel:  ${element.stats.hpperlevel}</p>
     <p  class="p" >Vel de mov.:  ${element.stats.movespeed} ~~ Vel. de ataque:  ${element.stats.attackspeedoffset}</p>
     <p id="attackdamage" class="p" >Daño de ataque:  ${element.stats.attackdamage}</p>
-    
-   
-    
     </div>
     </div>
     </div>`
     prueba.insertAdjacentHTML("beforeend", card);
   });
-}
+  return volverpintar;
+};
 
-// let orderAZ = result.sort((a,b) =>{
-//
-// if (a.name > b.name){
-// return 1
-// }
-// return -1
-// });
-// console.log(orderAZ);
 
-const boton = document.getElementById("eliminar");
-
-function borrar (){
+const borrar = () =>{
   document.getElementById("prueba").innerHTML=""
-}
+};
+
+
+
+const orden = () =>{
+  let val=change3.value;
+  let newArray;
+
+  borrar();
+  const result1 = window.data.championSearch(LOL.data);
+  if(val==='D'){
+    newArray=result1.reverse()
+    volverpintar(newArray);
+  }else if(val==='A'){
+    newArray=result1;
+    volverpintar(newArray);
+  }
+
+};
+
+const buscarNombre = () =>{
+
+  let valorabuscar = document.getElementById('buscName').value;
+  let newArray = result.filter(function (el) {
+    return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
+  });
+  borrar();
+  volverpintar(newArray);
+
+};
+
+const rol = () =>{
+  let valorabuscar = document.getElementById('filterRol').value;
+  let newArray = result.filter(function (el) {
+    return el.tags.indexOf(valorabuscar) !== -1;
+
+  });
+  borrar();
+  volverpintar(newArray);
+
+};
+
 boton.addEventListener("click",borrar);
-
-
-const boton2 = document.getElementById("seaForName");
-
-boton2.addEventListener("click",volverpintar);
-
-
+boton2.addEventListener("click",buscarNombre);
+// change1.addEventListener("change",mejoresCampeones);
+change2.addEventListener("change",rol);
+change3.addEventListener("change",orden);
 
 
 
-
-
-//
