@@ -34,7 +34,6 @@ color:#D4AF37;
 text-align:center;
 font-family:Friz Quadrata;
 height:20%;
-}
 
 .styleNavigationBar{
   text-align:center;
@@ -59,8 +58,20 @@ height:20%;
 
 .container{
 width:100%;
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
 }
 
+/* .container{
+width:100%;
+margin: 0px auto;
+display: flex;
+
+} */
 
 
 /*Estilos del formato para las cartas donde aparece la información de los campeones*/

@@ -41,7 +41,6 @@ let printData = (arrayDebug) => {
 
 
 
-//Función para borrar tajetas de todos los campeones
 let deleteData = () =>{
   document.getElementById("id-dataBox").innerHTML=""
 };
@@ -60,7 +59,6 @@ const orderChampions = () =>{
     }
   };
 
-
   const SearchChampion = () =>{
 
     let valueBySearch = inputName.value;
@@ -71,17 +69,16 @@ const orderChampions = () =>{
     printData(newArray);
   };
 
+
   const ShowByRol = () =>{
     let chosenValue = selectRol.value;
     let newArrayRol = arrayDebug.filter(function (el) {
       return el.tags.indexOf(chosenValue) !== -1;
-  
     });
     deleteData();
     printData(newArrayRol);
   
   };
-
 
 // Filtra a los campeones por mejor atributo
 const ShowBestChampions = () =>{
@@ -92,12 +89,21 @@ const ShowBestChampions = () =>{
 
 };
 
+
+
+// Función que permite contar el número de campeones por cada rol
+result.forEach(element => {
+const cantidadTags = element.tags.reduce((contadortags, tags) => {
+contadortags[tags] = (contadortags [tags] || 0) +1;
+return contadortags;
+
+}, {});
+console.log(cantidadTags)
+});
+
 bestAttributes.addEventListener("change",ShowBestChampions);//Detonar botón para puntar todas las tarjetas
 buttonShowChampions.addEventListener("click",printData);//Detonar botón para borrar tarjetas
 buttonHideChampions.addEventListener("click",deleteData);
 buttonSearchName.addEventListener("click",SearchChampion);
 selectRol.addEventListener("change",ShowByRol);
 selectOrder.addEventListener("change",orderChampions);
-
-
-

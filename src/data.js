@@ -1,7 +1,7 @@
 window.data ={
-
   debugData: (data) => {
     let newArraydeData = [];
+
     for(let i in data ){
       let name = data[i]["name"];
       let title = data[i]["title"];
@@ -27,7 +27,6 @@ window.data ={
     return (newArraydeData);
   },
 };
-
 
 
 window.data=data;
