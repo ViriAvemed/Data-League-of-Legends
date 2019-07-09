@@ -20,67 +20,61 @@
   </script>
 </head>
 
-<body>
+
   <section class="loader"></section>
 
-
-    <div class="header">
-      <img style="float:left;" id="logo" src="imagenes/logo.jpg"  alt="Logo League of Legends" >
-      <h1 class="encabezado">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
+  <header>
+    <div class="styleHeader">
+      <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends" class="styleLogo" >
+      <h1 class="styleTittleHeader">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
     </div>
 
     <section class="container"></section>
 
-  <div id="filtros" class="father">
+  <div id="id-navigationBar" class="styleNavigationBar">
 
-      <select name="championsFilter" id="champFilter" class="son">
+      <select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
         <option selected>Mejores Campeones</option>
-        <option value="attack" id="ataque">Ataque</option>
-        <option value="defense" id="defensa">Defensa</option>
-        <option value="difficulty" id="dificultad">Dificultad</option>
-        <option value="magic" id="magia">Magia</option>
+        <option value="attack" id="id-attack">Ataque</option>
+        <option value="defense" id="id-defense">Defensa</option>
+        <option value="difficulty" id="id-difficulty">Dificultad</option>
+        <option value="magic" id="id-magic">Magia</option>
       </select>
 
-    <select name="fitralPorRol" id="filterRol" class="son">
+    <select name="filterByRol" id="id-filterByRol" class="styleFilters">
       <option selected value="0">Rol</option>
-      <option id="assassin" value="Assassin">Asesino</option>
-      <option id="magician" value="Mage">Mago</option>
-      <option id="fighter" value="Fighter">Luchador</option>
-      <option id="support" value="Support">Soporte</option>
-      <option id="tank" value="Tank">Tanque</option>
-      <option id="shooter" value="Marksman">Tirador</option>
+      <option id="id-assassin" value="Assassin">Asesino</option>
+      <option id="id-magician" value="Mage">Mago</option>
+      <option id="id-fighter" value="Fighter">Luchador</option>
+      <option id="id-support" value="Support">Soporte</option>
+      <option id="id-tank" value="Tank">Tanque</option>
+      <option id="id-marksman" value="Marksman">Tirador</option>
     </select>
 
-    <select name="orderAZ" id="filterRol2" class="son">
+    <select name="orderABC" id="id-orderABC" class="styleFilters">
       <option selected value="Orden">Orden</option>
       <option value="A">A-Z</option>
       <option value="D">Z-A</option>
     </select>
 
-    <input type="search" id="buscName" name="Buscar" class="nameOfChampion" placeholder="Nombre del campeón" class="son">
-    <button id="seaForName" class="btnsearch" >MOSTRAR CAMPEONES</button>
-    <button id="eliminar" class="btndelete">OCULTAR CAMPEONES</button>
+    <input type="search" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="Nombre del campeón" class="styleFilters">
+    <button id="id-buttonSearchByName" class="btnsearch" >IR</button>
+    <button id="id-showChampions" class="btnsearch" >MOSTRAR CAMPEONES</button>
+    <button id="id-HideChampions" class="btndelete">OCULTAR CAMPEONES</button>
     </div>
-  <br>
-  <br>
-  <br>
-<!--  <div>-->
-  <p><a href="audio/grietaDelInvocador.mp3" class="imagenes/logo.jpg"></p>
-   <audio id="invocation" class="audio" src="audio/grietaDelInvocador.mp3" preload="none" controls poster="IMG/logo_LOL.jpg"></audio>
-<!--    <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>-->
-<!--  </div>-->
+
+   </header>
+
+<body>
+
+  <div>
+    <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls ></audio>
+    <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
+  </div>
 
 
 
-
-  <div id="prueba"></div>
-  <div id="bestattack"></div>
-  <br>
-  <br>
-  <br>
-  <br>
-  </section>
-  </section>
+  <div id="id-dataBox"></div>
 
 
   <script src="./data/lol/lol.js"></script>

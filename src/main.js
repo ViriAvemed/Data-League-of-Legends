@@ -1,15 +1,21 @@
-const prueba = document.getElementById('prueba');// Llamado de div para pintar las tarjetas
-const boton2 = document.getElementById('seaForName');// Botón que busca al campeón por nombre
-const boton = document.getElementById("eliminar");// Botón que esconde todas las tarjetas
-const change1 = document.getElementById('champFilter');// Menú desplegable que filtra a los campeones por atributo
-const change2 = document.getElementById('filterRol');// Menú desplegable que filtra a los campeones por rol
-const change3 = document.getElementById('filterRol2');// Menú desplegable que ordena a los campeones de la A a la Z y viceversa
-const result = window.data.championSearch(LOL.data); // Llamado del archivo data.js 
+
+const arrayDebug = window.data.debugData(LOL.data);
+const inputName = document.getElementById("id-searchByName");
+const buttonDataBox = document.getElementById("id-dataBox");
+const buttonSearchName = document.getElementById("id-buttonSearchByName");
+const buttonHideChampions = document.getElementById("id-HideChampions");
+const buttonShowChampions = document.getElementById("id-showChampions");
+const selectRol = document.getElementById("id-filterByRol");
+const selectOrder = document.getElementById("id-orderABC");
+const bestAttributes = document.getElementById("id-filterByAttribute");
+const opcionToOrder= document.getElementById("id-orderABC");
 
 
-const volverpintar =(result) => {// Función que pinta toda la data deseada
-  result.forEach(element => {
-    card =`<div class="flip-card">
+
+
+let printData = (arrayDebug) => {
+  arrayDebug.forEach(element => {
+     card = `<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">
     <img src="${element.splash}" class="i">
@@ -28,78 +34,61 @@ const volverpintar =(result) => {// Función que pinta toda la data deseada
     </div>
     </div>`
 
-    prueba.insertAdjacentHTML("beforeend", card);
+    buttonDataBox.insertAdjacentHTML("beforeend", card);
   });
-  return volverpintar;
+  return printData;
 };
 
 
 
-//Función para borrar tajetas de todos los campeones
-let borrar = () =>{
-  document.getElementById("prueba").innerHTML=""
-}
+let deleteData = () =>{
+  document.getElementById("id-dataBox").innerHTML=""
+};
 
 
-// Función que ordena de la A a la Z y viceversa
-const orden = () =>{
-    let val=change3.value;
-    let newArray;
-    borrar();
-    const result1 = window.data.championSearch(LOL.data);
-    if(val==='D'){
-      newArray=result1.reverse()
-      volverpintar(newArray);
-    }else if(val==='A'){
-      newArray=result1;
-      volverpintar(newArray);
+const orderChampions = () =>{
+    let selectedOption = opcionToOrder.value;
+    let newArrayOrdered;
+  deleteData();
+    if(selectedOption === 'D'){
+      newArrayOrdered = arrayDebug.reverse();
+      printData(newArrayOrdered);
+    }else if(selectedOption === 'A'){
+      newArrayOrdered = arrayDebug;
+      printData(newArrayOrdered);
     }
-  
   };
 
-// Función que permite la búsqueda por nombre de cada campeón
-  const buscarNombre = () =>{
-    let valorabuscar = document.getElementById('buscName').value;
-    let newArray = result.filter(function (el) {
-      return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
+  const SearchChampion = () =>{
+
+    let valueBySearch = inputName.value;
+    let newArray = arrayDebug.filter(function (el) {
+      return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
     });
-    borrar();
-    volverpintar(newArray);
+    deleteData();
+    printData(newArray);
   };
 
-// Función que permite el filtrado por rol
-  let rol = () =>{
-    let valorabuscar = document.getElementById('filterRol').value;
-    let newArray = result.filter(function (el) {
-      return el.tags.indexOf(valorabuscar) !== -1;
-  
+
+  const ShowByRol = () =>{
+    let chosenValue = selectRol.value;
+    let newArrayRol = arrayDebug.filter(function (el) {
+      return el.tags.indexOf(chosenValue) !== -1;
     });
-    borrar();
-    volverpintar(newArray);
+    deleteData();
+    printData(newArrayRol);
   
   };
-
-
-boton2.addEventListener("click",volverpintar);//Detonar botón para puntar todas las tarjetas
-boton.addEventListener("click",borrar);//Detonar botón para borrar tarjetas
-boton2.addEventListener("click",buscarNombre); // Detonar botón para búsqueda por nombre
-change2.addEventListener("change",rol); // Detonar selector para cambio de rol
-change3.addEventListener("change",orden); // Detonar selector para cambio de orden
-
-
-
 
 // Filtra a los campeones por mejor atributo
-let bestAttack=document.getElementById("champFilter")
-const printattack = () =>{
-    let atributos = bestAttack.value;
-    let attack=result.filter (result => result.info[atributos] >9);
-    borrar();
-    volverpintar(attack);
-}
+const ShowBestChampions = () =>{
+    let attributes = bestAttributes.value;
+    let newArray=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
+  deleteData();
+  printData(newArray);
 
+};
 
-bestAttack.addEventListener("change",printattack); // Detonar selector para cambiar de atributo
 
 
 // Función que permite contar el número de campeones por cada rol
@@ -111,3 +100,10 @@ return contadortags;
 }, {});
 console.log(cantidadTags)
 });
+
+bestAttributes.addEventListener("change",ShowBestChampions);//Detonar botón para puntar todas las tarjetas
+buttonShowChampions.addEventListener("click",printData);//Detonar botón para borrar tarjetas
+buttonHideChampions.addEventListener("click",deleteData);
+buttonSearchName.addEventListener("click",SearchChampion);
+selectRol.addEventListener("change",ShowByRol);
+selectOrder.addEventListener("change",orderChampions);
