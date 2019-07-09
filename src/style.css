@@ -32,7 +32,7 @@ body  {
 .styleTittleHeader{
 color:#90723b;
 text-align:center;
-font-family:Friz Quadrata;
+  font-family: Friz Quadrata, sans-serif;
 height:20%;
 }
 
@@ -72,14 +72,14 @@ width:100%;
   float: left;
   margin: 2%;
   color: #CBC2B0;
-  font-family: Friz Quadrata;
+  font-family: Friz Quadrata, sans-serif;
   font-size: small;
 
 }
 
 .apodo{
   color: #84683d;
-  font-family: Friz Quadrata;
+  font-family: Friz Quadrata, sans-serif;
 }
 
 .flip-card-inner {
@@ -159,7 +159,7 @@ margin:1%;
 color:#9d7f43;
 background:black;
 border:none;
-font-family:font-family:'Gurajada', serif;
+font-family:'Gurajada', serif;
 font-size:100%;
 size:100%;
 }

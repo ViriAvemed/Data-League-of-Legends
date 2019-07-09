@@ -1,7 +1,7 @@
 window.data ={
 
   debugData: (data) => {
-    let newArraydeData = [];
+    let newArrayData = [];
     for(let i in data ){
       let name = data[i]["name"];
       let title = data[i]["title"];
@@ -10,7 +10,7 @@ window.data ={
       let splash = data[i]["splash"];
       let stats = data[i]["stats"];
 
-      newArraydeData.push(
+      newArrayData.push(
         {
           name,
           title,
@@ -24,7 +24,7 @@ window.data ={
 
     }
 
-    return (newArraydeData);
+    return (newArrayData);
   },
 };
 
