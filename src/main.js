@@ -8,7 +8,8 @@ const buttonShowChampions = document.getElementById("id-showChampions");
 const selectRol = document.getElementById("id-filterByRol");
 const selectOrder = document.getElementById("id-orderABC");
 const bestAttributes = document.getElementById("id-filterByAttribute");
-const opcionToOrder= document.getElementById("id-orderABC");
+const optionToOrder= document.getElementById("id-orderABC");
+const deleteDataBox=document.getElementById("id-dataBox");
 
 
 
@@ -42,12 +43,12 @@ let printData = (arrayDebug) => {
 
 //Función para borrar tajetas de todos los campeones
 let deleteData = () =>{
-  document.getElementById("id-dataBox").innerHTML=""
+  deleteDataBox.innerHTML=""
 };
 
 
 const orderChampions = () =>{
-    let selectedOption = opcionToOrder.value;
+    let selectedOption = optionToOrder.value;
     let newArrayOrdered;
   deleteData();
     if(selectedOption === 'D'){
@@ -90,6 +91,7 @@ const ShowBestChampions = () =>{
   printData(newArray);
 
 };
+
 
 bestAttributes.addEventListener("change",ShowBestChampions);//Detonar botón para puntar todas las tarjetas
 buttonShowChampions.addEventListener("click",printData);//Detonar botón para borrar tarjetas

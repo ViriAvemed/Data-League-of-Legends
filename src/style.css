@@ -1,6 +1,6 @@
 
 body  {
-  background-image:  url("https://vignette3.wikia.nocookie.net/leagueoflegends/images/5/50/Wiki-background/revision/latest?cb=20160408170617&path-prefix=es");
+  background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
@@ -30,7 +30,7 @@ body  {
 
 
 .styleTittleHeader{
-color:#D4AF37;
+color:#90723b;
 text-align:center;
 font-family:Friz Quadrata;
 height:20%;
