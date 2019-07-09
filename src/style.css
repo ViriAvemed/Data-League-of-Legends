@@ -34,7 +34,6 @@ color:#90723b;
 text-align:center;
   font-family: Friz Quadrata, sans-serif;
 height:20%;
-}
 
 .styleNavigationBar{
   text-align:center;
@@ -59,8 +58,20 @@ height:20%;
 
 .container{
 width:100%;
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
 }
 
+/* .container{
+width:100%;
+margin: 0px auto;
+display: flex;
+
+} */
 
 
 /*Estilos del formato para las cartas donde aparece la información de los campeones*/
@@ -136,14 +147,6 @@ width:100%;
     background: url(IMG/loader.gif) 50% 50% no-repeat rgb(0,0,0);
     opacity: .8;
 }
-
-
-
-
-
-
-
-
 
 .btnsearch, .btndelete  {
 color:#9d7f43;
