@@ -76,7 +76,6 @@ const orden = () =>{
     });
     borrar();
     volverpintar(newArray);
-  
   };
 
 
@@ -100,14 +99,3 @@ const printattack = () =>{
 
 
 bestAttack.addEventListener("change",printattack); // Detonar selector para cambiar de atributo
-
-
-// Función que permite contar el número de campeones por cada rol
-result.forEach(element => {
-const cantidadTags = element.tags.reduce((contadortags, tags) => {
-contadortags[tags] = (contadortags [tags] || 0) +1;
-return contadortags;
-
-}, {});
-console.log(cantidadTags)
-});
