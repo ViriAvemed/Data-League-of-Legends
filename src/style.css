@@ -1,14 +1,38 @@
 
 body  {
-  background-image: url("https://wallpapermemory.com/uploads/222/fiddlesticks-league-of-legends-background-hd-1600x768-172199.jpg");
+
+  background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
   margin:0%;
 
 }
-.encabezado{
-color:#90723B;
+
+
+/*Clases de los elementos encontrados en el encabezado*/
+
+.styleHeader {
+  color: white;
+  background-color: #030814;
+  font-family: Beaufort for LOL,Arial,sans-serif;
+  font-size: 19px;
+  border-bottom: 1px solid #262626;
+  align-content: center;
+  padding: 5px 0 0 0;
+
+}
+
+.styleLogo{
+  width: 50px;
+  height: 50px;
+  float:left;"
+
+}
+
+
+.styleTittleHeader{
+color:#90723b;
 text-align:center;
 font-family:Friz Quadrata;
 height:20%;
