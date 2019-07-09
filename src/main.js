@@ -1,18 +1,13 @@
-// let cardGeneral= document.getElementById("cardGeneral");
-// cardGeneral.insertAdjacentHTML("afterbegin",  `<section id="prueba"></section>`);
-
-// Llamado de div para puntar las tarjetas
-const prueba = document.getElementById('prueba');
-const boton2 = document.getElementById('seaForName');
-const boton = document.getElementById("eliminar");
-const result = window.data.championSearch(LOL.data);
-const change1 = document.getElementById('champFilter');
-const change2 = document.getElementById('filterRol');
-const change3 = document.getElementById('filterRol2');
+const prueba = document.getElementById('prueba');// Llamado de div para pintar las tarjetas
+const boton2 = document.getElementById('seaForName');// Botón que busca al campeón por nombre
+const boton = document.getElementById("eliminar");// Botón que esconde todas las tarjetas
+const change1 = document.getElementById('champFilter');// Menú desplegable que filtra a los campeones por atributo
+const change2 = document.getElementById('filterRol');// Menú desplegable que filtra a los campeones por rol
+const change3 = document.getElementById('filterRol2');// Menú desplegable que ordena a los campeones de la A a la Z y viceversa
+const result = window.data.championSearch(LOL.data); // Llamado del archivo data.js 
 
 
-
-const volverpintar =(result) => {
+const volverpintar =(result) => {// Función que pinta toda la data deseada
   result.forEach(element => {
     card =`<div class="flip-card">
     <div class="flip-card-inner">
@@ -46,7 +41,7 @@ let borrar = () =>{
 }
 
 
-
+// Función que ordena de la A a la Z y viceversa
 const orden = () =>{
     let val=change3.value;
     let newArray;
@@ -62,10 +57,8 @@ const orden = () =>{
   
   };
 
-
+// Función que permite la búsqueda por nombre de cada campeón
   const buscarNombre = () =>{
-
-
     let valorabuscar = document.getElementById('buscName').value;
     let newArray = result.filter(function (el) {
       return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
@@ -74,8 +67,8 @@ const orden = () =>{
     volverpintar(newArray);
   };
 
-
-  const rol = () =>{
+// Función que permite el filtrado por rol
+  let rol = () =>{
     let valorabuscar = document.getElementById('filterRol').value;
     let newArray = result.filter(function (el) {
       return el.tags.indexOf(valorabuscar) !== -1;
@@ -87,15 +80,11 @@ const orden = () =>{
   };
 
 
-
-//Detonar botón para puntar todas las tarjetas
-boton2.addEventListener("click",volverpintar);
-//Detonar botón para borrar tarjetas
-boton.addEventListener("click",borrar);
-boton2.addEventListener("click",buscarNombre);
-// change1.addEventListener("change",mejoresCampeones);
-change2.addEventListener("change",rol);
-change3.addEventListener("change",orden);
+boton2.addEventListener("click",volverpintar);//Detonar botón para puntar todas las tarjetas
+boton.addEventListener("click",borrar);//Detonar botón para borrar tarjetas
+boton2.addEventListener("click",buscarNombre); // Detonar botón para búsqueda por nombre
+change2.addEventListener("change",rol); // Detonar selector para cambio de rol
+change3.addEventListener("change",orden); // Detonar selector para cambio de orden
 
 
 
@@ -107,8 +96,18 @@ const printattack = () =>{
     let attack=result.filter (result => result.info[atributos] >9);
     borrar();
     volverpintar(attack);
-
 }
 
 
-bestAttack.addEventListener("change",printattack);
+bestAttack.addEventListener("change",printattack); // Detonar selector para cambiar de atributo
+
+
+// Función que permite contar el número de campeones por cada rol
+result.forEach(element => {
+const cantidadTags = element.tags.reduce((contadortags, tags) => {
+contadortags[tags] = (contadortags [tags] || 0) +1;
+return contadortags;
+
+}, {});
+console.log(cantidadTags)
+});

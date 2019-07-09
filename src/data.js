@@ -1,5 +1,5 @@
 window.data ={
-
+// Función que depura la data y solo hace el llamado de la data solicitada
   championSearch: (data) => {
     let cardGeneral = [];
     for(let i in data ){
@@ -25,10 +25,10 @@ window.data ={
     }
   
     return (cardGeneral);
-} 
-},
+}, 
 
 
+};
 
 window.data=data;
 
