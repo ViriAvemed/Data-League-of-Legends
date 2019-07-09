@@ -1,6 +1,4 @@
-
 body  {
-
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,7 +6,6 @@ body  {
   margin:0%;
 
 }
-
 
 /*Clases de los elementos encontrados en el encabezado*/
 
@@ -38,19 +35,34 @@ font-family:Friz Quadrata;
 height:20%;
 }
 
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+.styleNavigationBar{
+  text-align:center;
+  background-color: #030814;
+  font-family: 'Gurajada', serif;
 }
 
-/* .container{
+
+.styleFilters{
+  display:inline-block;
+  padding: 0 10px 0 0;
+  margin: 0 50px 0 0;
+  background-color: #030814;
+  border: none;
+  text-decoration:none;
+  color: #9d7f43;
+  font-family: 'Gurajada', serif;
+  font-size: 25px;
+  size:100%;
+
+}
+
+.container{
 width:100%;
-margin: 0px auto;
-display: flex;
+}
 
-} */
 
+
+/*Estilos del formato para las cartas donde aparece la información de los campeones*/
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -61,6 +73,7 @@ display: flex;
   color: #CBC2B0;
   font-family: Friz Quadrata;
   font-size: small;
+
 }
 
 .apodo{
@@ -124,46 +137,6 @@ display: flex;
 }
 
 
-.header {
-  color: white;
-  background-color: #030814;
-  font-family: Beaufort for LOL,Arial,sans-serif;
-  font-size: 19px;
-  border-bottom: 1px solid #262626;
-  align-content: center;
-  padding: 5px 0 0 0;
-
-}
-
-#logo{
-  width: 50px;
-  height: 50px;
-
-}
-
-
-
-.father{
-  text-align:center;
-  background-color: #030814;
-  font-family: 'Gurajada', serif;
-}
-
-
-.son{
-  display:inline-block;
-  padding: 0 10px 0 0;
-  margin: 0 50px 0 0;
-  background-color: black;
-  border: none;
-  text-decoration:none;
-  color: #9d7f43;
-  font-family: 'Gurajada', serif;
-  font-size: 25px;
-  size:100%;
-
-}
-
 .btnsearch, .btndelete  {
 color:#9d7f43;
 background: black;
@@ -178,7 +151,7 @@ margin:1%;
 color:#9d7f43;
 background:black;
 border:none;
-font-family:font-family:'Gurajada', serif;
+font-family:'Gurajada', serif;
 font-size:100%;
 size:100%;
 }
@@ -220,4 +193,4 @@ height:5%;
 /* Para 320px */  
 @media only screen and (max-width: 340px) and (min-width: 5px)  {  
   
-} 
+}

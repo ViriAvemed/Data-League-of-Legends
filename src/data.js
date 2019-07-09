@@ -1,7 +1,7 @@
 window.data ={
 // Función que depura la data y solo hace el llamado de la data solicitada
-  championSearch: (data) => {
-    let cardGeneral = [];
+  debugData: (data) => {
+    let newarrayData = [];
     for(let i in data ){
       let name = data[i]["name"];
       let title = data[i]["title"];
@@ -10,7 +10,7 @@ window.data ={
       let splash = data[i]["splash"];
       let stats = data[i]["stats"];
         
-       cardGeneral.push(
+      newarrayData.push(
          {
            name,
            title,
@@ -24,7 +24,7 @@ window.data ={
 
     }
   
-    return (cardGeneral);
+    return (newarrayData);
 }, 
 
 
