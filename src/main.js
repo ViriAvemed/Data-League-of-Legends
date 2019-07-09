@@ -12,6 +12,7 @@ const opcionToOrder= document.getElementById("id-orderABC");
 
 
 
+
 let printData = (arrayDebug) => {
   arrayDebug.forEach(element => {
      card = `<div class="flip-card">
