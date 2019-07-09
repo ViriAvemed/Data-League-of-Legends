@@ -29,6 +29,7 @@ var LOL = {
         y: 0,
         w: 48,
         h: 48
+    
       },
       tags: ["Fighter", "Tank"],
       partype: "BloodWell",

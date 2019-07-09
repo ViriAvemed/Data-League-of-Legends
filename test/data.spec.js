@@ -1,12 +1,17 @@
-require('../src/data.js');
+const data = require('../src/data.js');
 
+describe('championSearch()', () => {
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+  it('debería ser un objeto', () => {
+    assert.equal(typeof data, 'object');
   });
+  
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+});
+
+describe('data.championSearch', () => {
+
+  it('debería ser una función', () => {
+    assert.equal(typeof data.championSearch, 'function');
   });
 });

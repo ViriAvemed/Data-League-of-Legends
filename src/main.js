@@ -1,4 +1,5 @@
 
+
 const arrayDebug = window.data.debugData(LOL.data);
 const inputName = document.getElementById("id-searchByName");
 const buttonDataBox = document.getElementById("id-dataBox");
@@ -16,6 +17,7 @@ const deleteDataBox=document.getElementById("id-dataBox");
 let printData = (arrayDebug) => {
   arrayDebug.forEach(element => {
      card = `<div class="flip-card">
+
     <div class="flip-card-inner">
     <div class="flip-card-front">
     <img src="${element.splash}" class="i">
@@ -42,6 +44,7 @@ let printData = (arrayDebug) => {
 
 
 //Función para borrar tajetas de todos los campeones
+
 let deleteData = () =>{
   deleteDataBox.innerHTML=""
 };
@@ -57,40 +60,32 @@ const orderChampions = () =>{
     }else if(selectedOption === 'A'){
       newArrayOrdered = arrayDebug;
       printData(newArrayOrdered);
-    }
-  };
 
 
-  const SearchChampion = () =>{
 
-    let valueBySearch = inputName.value;
-    let newArray = arrayDebug.filter(function (el) {
-      return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
+
+// Función que permite la búsqueda por nombre de cada campeón
+  const buscarNombre = () =>{
+    let valorabuscar = document.getElementById('buscName').value;
+    let newArray = result.filter(function (el) {
+      return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
     });
-    deleteData();
-    printData(newArray);
+    borrar();
+    volverpintar(newArray);
   };
 
-  const ShowByRol = () =>{
-    let chosenValue = selectRol.value;
-    let newArrayRol = arrayDebug.filter(function (el) {
-      return el.tags.indexOf(chosenValue) !== -1;
+// Función que permite el filtrado por rol
+  let rol = () =>{
+    let valorabuscar = document.getElementById('filterRol').value;
+    let newArray = result.filter(function (el) {
+      return el.tags.indexOf(valorabuscar) !== -1;
   
     });
-    deleteData();
-    printData(newArrayRol);
-  
+    borrar();
+    volverpintar(newArray);
   };
 
 
-// Filtra a los campeones por mejor atributo
-const ShowBestChampions = () =>{
-    let attributes = bestAttributes.value;
-    let newArray=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
-  deleteData();
-  printData(newArray);
-
-};
 
 
 bestAttributes.addEventListener("change",ShowBestChampions);//Detonar botón para puntar todas las tarjetas
@@ -101,4 +96,14 @@ selectRol.addEventListener("change",ShowByRol);
 selectOrder.addEventListener("change",orderChampions);
 
 
+// Filtra a los campeones por mejor atributo
+let bestAttack=document.getElementById("champFilter")
+const printattack = () =>{
+    let atributos = bestAttack.value;
+    let attack=result.filter (result => result.info[atributos] >9);
+    borrar();
+    volverpintar(attack);
+}
 
+
+bestAttack.addEventListener("change",printattack); // Detonar selector para cambiar de atributo
