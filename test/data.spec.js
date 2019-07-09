@@ -5,6 +5,7 @@ describe('championSearch()', () => {
   it('debería ser un objeto', () => {
     assert.equal(typeof data, 'object');
   });
+  
 
 });
 

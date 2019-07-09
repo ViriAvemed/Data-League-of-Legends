@@ -1,5 +1,6 @@
 
 body  {
+
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7,6 +8,7 @@ body  {
   margin:0%;
 
 }
+
 
 /*Clases de los elementos encontrados en el encabezado*/
 
@@ -34,36 +36,12 @@ color:#90723b;
 text-align:center;
   font-family: Friz Quadrata, sans-serif;
 height:20%;
-
-.styleNavigationBar{
-  text-align:center;
-  background-color: #030814;
-  font-family: 'Gurajada', serif;
 }
-
-
-.styleFilters{
-  display:inline-block;
-  padding: 0 10px 0 0;
-  margin: 0 50px 0 0;
-  background-color: #030814;
-  border: none;
-  text-decoration:none;
-  color: #9d7f43;
-  font-family: 'Gurajada', serif;
-  font-size: 25px;
-  size:100%;
-
-}
-
-.container{
-width:100%;
 
 *{
 box-sizing: border-box;
 margin: 0;
 padding: 0;
-
 }
 
 /* .container{
@@ -73,8 +51,6 @@ display: flex;
 
 } */
 
-
-/*Estilos del formato para las cartas donde aparece la información de los campeones*/
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -85,7 +61,6 @@ display: flex;
   color: #CBC2B0;
   font-family: Friz Quadrata, sans-serif;
   font-size: small;
-
 }
 
 .apodo{
@@ -146,6 +121,47 @@ display: flex;
     z-index: 9999;
     background: url(IMG/loader.gif) 50% 50% no-repeat rgb(0,0,0);
     opacity: .8;
+}
+
+
+.header {
+  color: white;
+  background-color: #030814;
+  font-family: Beaufort for LOL,Arial,sans-serif;
+  font-size: 19px;
+  border-bottom: 1px solid #262626;
+  align-content: center;
+  padding: 5px 0 0 0;
+
+}
+
+#logo{
+  width: 50px;
+  height: 50px;
+
+}
+
+
+
+.father{
+  text-align:center;
+  background-color: #030814;
+  font-family: 'Gurajada', serif;
+}
+
+
+.son{
+  display:inline-block;
+  padding: 0 10px 0 0;
+  margin: 0 50px 0 0;
+  background-color: black;
+  border: none;
+  text-decoration:none;
+  color: #9d7f43;
+  font-family: 'Gurajada', serif;
+  font-size: 25px;
+  size:100%;
+
 }
 
 .btnsearch, .btndelete  {
