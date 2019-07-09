@@ -1,16 +1,20 @@
 
-// Llamado de div para puntar las tarjetas
-const prueba = document.getElementById('prueba');
-const boton2 = document.getElementById('seaForName');
-const boton = document.getElementById("eliminar");
-const result = window.data.championSearch(LOL.data);
-const change2 = document.getElementById('filterRol');
-const change3 = document.getElementById('filterRol2');
+const arrayDebug = window.data.debugData(LOL.data);
+const inputName = document.getElementById("id-searchByName");
+const buttonDataBox = document.getElementById("id-dataBox");
+const buttonSearchName = document.getElementById("id-buttonSearchByName");
+const buttonHideChampions = document.getElementById("id-HideChampions");
+const buttonShowChampions = document.getElementById("id-showChampions");
+const selectRol = document.getElementById("id-filterByRol");
+const selectOrder = document.getElementById("id-orderABC");
+const bestAttributes = document.getElementById("id-filterByAttribute");
+const opcionToOrder= document.getElementById("id-orderABC");
 
 
-const volverpintar =(results) => {
-  results.forEach(element => {
-    card =`<div class="flip-card">
+
+let printData = (arrayDebug) => {
+  arrayDebug.forEach(element => {
+     card = `<div class="flip-card">
     <div class="flip-card-inner">
     <div class="flip-card-front">
     <img src="${element.splash}" class="i">
@@ -29,73 +33,70 @@ const volverpintar =(results) => {
     </div>
     </div>`
 
-    prueba.insertAdjacentHTML("beforeend", card);
+    buttonDataBox.insertAdjacentHTML("beforeend", card);
   });
-  return volverpintar;
+  return printData;
 };
 
 
 
 //Función para borrar tajetas de todos los campeones
-let borrar = () =>{
-  document.getElementById("prueba").innerHTML=""
-}
+let deleteData = () =>{
+  document.getElementById("id-dataBox").innerHTML=""
+};
 
 
-
-const orden = () =>{
-
-    let val=change3.value;
-    let newArray;
-    borrar();
-    const result1 = window.data.championSearch(LOL.data);
-    if(val==='D'){
-      newArray=result1.reverse()
-      volverpintar(newArray);
-    }else if(val==='A'){
-      newArray=result1;
-      volverpintar(newArray);
+const orderChampions = () =>{
+    let selectedOption = opcionToOrder.value;
+    let newArrayOrdered;
+  deleteData();
+    if(selectedOption === 'D'){
+      newArrayOrdered = arrayDebug.reverse();
+      printData(newArrayOrdered);
+    }else if(selectedOption === 'A'){
+      newArrayOrdered = arrayDebug;
+      printData(newArrayOrdered);
     }
-  
   };
 
 
-  const buscarNombre = () =>{
+  const SearchChampion = () =>{
 
-    let valorabuscar = document.getElementById('buscName').value;
-    let newArray = result.filter(function (el) {
-      return el.name.toLowerCase().indexOf(valorabuscar) !== -1;
+    let valueBySearch = inputName.value;
+    let newArray = arrayDebug.filter(function (el) {
+      return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
     });
-    borrar();
-    volverpintar(newArray);
+    deleteData();
+    printData(newArray);
   };
 
-  const rol = () =>{
-    let valorabuscar = document.getElementById('filterRol').value;
-    let newArray = result.filter(function (el) {
-      return el.tags.indexOf(valorabuscar) !== -1;
+  const ShowByRol = () =>{
+    let chosenValue = selectRol.value;
+    let newArrayRol = arrayDebug.filter(function (el) {
+      return el.tags.indexOf(chosenValue) !== -1;
   
     });
-    borrar();
-    volverpintar(newArray);
+    deleteData();
+    printData(newArrayRol);
   
   };
 
 
 // Filtra a los campeones por mejor atributo
-let bestAttack=document.getElementById("champFilter");
-const printattack = () =>{
-    let atributos = bestAttack.value;
-    let attack=result.filter (result => result.info[atributos] >9);
-    borrar();
-    volverpintar(attack);
+const ShowBestChampions = () =>{
+    let attributes = bestAttributes.value;
+    let newArray=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
+  deleteData();
+  printData(newArray);
 
 };
 
+bestAttributes.addEventListener("change",ShowBestChampions);//Detonar botón para puntar todas las tarjetas
+buttonShowChampions.addEventListener("click",printData);//Detonar botón para borrar tarjetas
+buttonHideChampions.addEventListener("click",deleteData);
+buttonSearchName.addEventListener("click",SearchChampion);
+selectRol.addEventListener("change",ShowByRol);
+selectOrder.addEventListener("change",orderChampions);
 
-bestAttack.addEventListener("change",printattack);//Detonar botón para puntar todas las tarjetas
-boton2.addEventListener("click",volverpintar);//Detonar botón para borrar tarjetas
-boton.addEventListener("click",borrar);
-boton2.addEventListener("click",buscarNombre);
-change2.addEventListener("change",rol);
-change3.addEventListener("change",orden);
+
+
