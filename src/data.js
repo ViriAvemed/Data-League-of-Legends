@@ -1,7 +1,7 @@
 window.data ={
 // Función que depura la data y solo hace el llamado de la data solicitada
-  championSearch: (data) => {
-    let cardGeneral = [];
+  debugData: (data) => {
+    let newarrayData = [];
     for(let i in data ){
       let name = data[i]["name"];
       let title = data[i]["title"];
@@ -10,7 +10,7 @@ window.data ={
       let splash = data[i]["splash"];
       let stats = data[i]["stats"];
         
-       cardGeneral.push(
+      newarrayData.push(
          {
            name,
            title,
@@ -18,18 +18,27 @@ window.data ={
            tags,
            splash,
            stats
-
-          }
-          );
-
+          });
     }
   
-    return (cardGeneral);
-}, 
+    return (newarrayData);
+},
 
-
-
+orderData: (data, selectedOption) => {
+  
+  let ordered = data.sort((a, b) => {
+    if(selectedOption === 'A'){
+    if (a.name > b.name) {
+      return 1;
+    }
+    }
+    else if (selectedOption === 'Z'){
+      if (a.name < b.name) {
+      return -1;
+    }
+    }  
+    return ordered;
+    
+});
+},
 };
-
-window.data=data;
-
