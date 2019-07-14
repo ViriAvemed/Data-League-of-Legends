@@ -9,6 +9,7 @@ window.data ={
       let tags = data[i]["tags"];
       let splash = data[i]["splash"];
       let stats = data[i]["stats"];
+
         
       newarrayData.push(
          {

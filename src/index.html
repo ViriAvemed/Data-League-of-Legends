@@ -2,22 +2,23 @@
 <html lang="es">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>THE BEST CHAMPIONS</title>
-    <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="pantalla.css">   -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
+  <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="pantalla.css">   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
     $(window).load(function() {
-        $(".loader").fadeOut("slow");
+      $(".loader").fadeOut("slow");
     });
 
   </script>
+
   
 </head>
 
@@ -27,67 +28,68 @@
   <div class="row"></div>
   <section class="loader"></section>
 
-    <div class="styleHeader">
-      <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends" class="styleLogo" >
-      <h1 class="styleTittleHeader">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
 
-    </div>
+<div class="styleHeader">
+  <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends" class="styleLogo" >
+  <h1 class="styleTittleHeader">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
 
-    <section class="container"></section>
+</div>
 
-    <div id="id-navigationBar" class="styleNavigationBar">
+<section class="container"></section>
 
-        <select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
-          <option selected>Mejores Campeones</option>
-          <option value="attack" id="id-attack">Ataque</option>
-          <option value="defense" id="id-defense">Defensa</option>
-          <option value="difficulty" id="id-difficulty">Dificultad</option>
-          <option value="magic" id="id-magic">Magia</option>
-        </select>
-  
-      <select name="filterByRol" id="id-filterByRol" class="styleFilters">
-        <option selected value="0">Rol</option>
-        <option id="id-assassin" value="Assassin">Asesino</option>
-        <option id="id-magician" value="Mage">Mago</option>
-        <option id="id-fighter" value="Fighter">Luchador</option>
-        <option id="id-support" value="Support">Soporte</option>
-        <option id="id-tank" value="Tank">Tanque</option>
-        <option id="id-marksman" value="Marksman">Tirador</option>
-      </select>
-  
-      <select name="orderABC" id="id-orderABC" class="styleFilters">
-        <option selected value="Orden">Orden</option>
-        <option value="A">A-Z</option>
-        <option value="Z">Z-A</option>
-      </select>
-  
-      <input type="search" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="Nombre del campeón">
-      <button id="id-buttonSearchByName" class="btnsearch" >IR</button>
-      <button id="id-HideChampions" class="btndelete">OCULTAR CAMPEONES</button>
-      </div>
-  
-  
-  
-    <div>
-      <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls ></audio>
-      <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
-    </div>
-  
-  
-  
-    <div id="id-dataBox"></div>
-  
-  
-    <script src="./data/lol/lol.js"></script>
-    <!-- <script src="./data/lol/lol.json"></script> -->
 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  
-    <footer class="footer">Developers
-  
-    </footer>
-  
-  </body>
-  
-  </html>
+<div id="id-navigationBar" class="styleNavigationBar">
+
+  <select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
+    <option selected>Mejores Campeones</option>
+    <option value="attack" id="id-attack">Ataque</option>
+    <option value="defense" id="id-defense">Defensa</option>
+    <option value="difficulty" id="id-difficulty">Dificultad</option>
+    <option value="magic" id="id-magic">Magia</option>
+  </select>
+
+  <select name="filterByRol" id="id-filterByRol" class="styleFilters">
+    <option selected value="0">Rol</option>
+    <option id="id-assassin" value="Assassin">Asesino</option>
+    <option id="id-magician" value="Mage">Mago</option>
+    <option id="id-fighter" value="Fighter">Luchador</option>
+    <option id="id-support" value="Support">Soporte</option>
+    <option id="id-tank" value="Tank">Tanque</option>
+    <option id="id-marksman" value="Marksman">Tirador</option>
+  </select>
+
+  <select name="orderABC" id="id-orderABC" class="styleFilters">
+    <option selected value="Orden">Orden</option>
+    <option value="A">A-Z</option>
+    <option value="Z">Z-A</option>
+  </select>
+
+  <input type="search" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="Nombre del campeón" class="styleFilters">
+  <button id="id-buttonSearchByName" class="btnsearch" >IR</button>
+  <button id="id-HideChampions" class="btndelete">OCULTAR CAMPEONES</button>
+</div>
+
+
+
+<div>
+  <audio id="invocation" src="audio/grietaDelInvocador.mp3" preload="none" controls ></audio>
+  <audio id="champiosPhrases" src="audio/frasesCampeones.mp3" preload="none" controls></audio>
+</div>
+
+
+
+<div id="id-dataBox"></div>
+
+
+<script src="./data/lol/lol.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
+
+<footer class="footer">Developers
+
+</footer>
+
+</body>
+
+</html>
+
