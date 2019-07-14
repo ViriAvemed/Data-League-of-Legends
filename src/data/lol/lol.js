@@ -1,4 +1,4 @@
-var LOL = {
+const LOL = {
   type: "champion",
   format: "standAloneComplex",
   version: "6.24.1",
@@ -29,7 +29,7 @@ var LOL = {
         y: 0,
         w: 48,
         h: 48
-    
+
       },
       tags: ["Fighter", "Tank"],
       partype: "BloodWell",
@@ -160,7 +160,7 @@ var LOL = {
         attackspeedperlevel: 3.1
       }
     },
-    
+
     Alistar: {
       version: "6.24.1",
       id: "Alistar",

@@ -18,17 +18,13 @@ window.data ={
           tags,
           splash,
           stats
-
-        }
-      );
-
+        });
     }
 
     return (newarrayData);
   },
 
 
-
 };
 
-window.data=data;
+window.data= data;
