@@ -1,4 +1,4 @@
-const LOL = window.LOL=LOL;
+// const LOL = window.LOL=LOL;
 const arrayDebug = window.data.debugData(LOL.data); // Variable que contiene la data depurada 
 // const orderChampions =window.data.orderChampions (LOL.data);
 const inputName = document.getElementById("id-searchByName"); // Variable que llama a la caja de búsqueda por nombre
