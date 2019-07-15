@@ -87,5 +87,5 @@ bestAttributes.addEventListener("change",ShowBestChampions); // Llamado de event
 buttonSearchName.addEventListener("click",SearchChampion); // Llamado evento de botón para buscar por nombre de campeón
 selectRol.addEventListener("change",ShowByRol);//Llamado de evento de selector para ordenar por rol
 optionToOrder.addEventListener("change",ord); //Llamado de evento de selector para ordenar de la A a la Z y viceversa
-
+selectRol.addEventListener("change", prom1);
 

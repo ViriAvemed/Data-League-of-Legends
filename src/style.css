@@ -211,7 +211,21 @@ font-size: 25px;
 
 }
 
+.result {
+ color:#9d7f43;
+ text-align: center;
+ font-family: 'Gurajada', serif;
+ font-size: 300%;
+ border: 2px solid #9d7f43;
+ margin: 0%;
+ padding: 0%;
+ 
 
+}
+
+.video{
+text-align: center;
+}
 
 .footer{
 background:black;
