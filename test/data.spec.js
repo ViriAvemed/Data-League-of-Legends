@@ -1,4 +1,4 @@
-const data = require('../src/data.js');
+// const data = require('../src/data.js');
 
 // describe('championSearch()', () => {
 

@@ -32,7 +32,7 @@ body  {
   background-color: #030814;
   font-family: Beaufort for LOL,Arial,sans-serif;
   font-size: 19px;
-  border-bottom: 1px solid #262626;
+  border-bottom: 4px solid #90723b;
   align-content: center;
   padding: 5px 0 0 0;
 
@@ -43,7 +43,9 @@ body  {
 .styleLogo{
   width: 50px;
   height: 50px;
-  float:left;"
+  float:left;
+  width: 6%;
+  height: 6%;
 
 }
 
@@ -51,8 +53,9 @@ body  {
 .styleTittleHeader{
 color:#90723b;
 text-align:center;
-  font-family: Friz Quadrata, sans-serif;
+font-family: Friz Quadrata, sans-serif;
 height:20%;
+padding: 2%;
 }
 
 .styleNavigationBar{
@@ -157,14 +160,6 @@ width:100%;
 
 }
 
-#logo{
-  width: 50px;
-  height: 50px;
-
-}
-
-
-
 .father{
   text-align:center;
   background-color: #030814;
@@ -187,14 +182,17 @@ width:100%;
 }
 
 
-.btnsearch, .btndelete  {
+.btnsearch, .btndelete, .styleFilters  {
 color:#9d7f43;
 background: black;
 font-family:'Gurajada', serif;
-font-size:100%;
+font-size:130%;
+text-align: center;
 border:5px #9d7f43 groove;
-size:100px;
+size:100%;
 margin:1%;
+height: 10%;
+width: 10%;
 }
 
 .nameOfChampion{
