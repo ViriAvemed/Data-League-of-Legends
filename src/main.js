@@ -73,12 +73,10 @@ const prom1= ()=> {
   let newArrayRol = arrayDebug.filter(function (el) {
     return el.tags[0].indexOf(chosenValue) !== -1;
   });
-  
   let rolAverage =newArrayRol.length*100 /134;
-  return (rolAverage);
+  // return (rolAverage);
   document.getElementById("id_result").innerHTML = "Sabías que del total de campeones los " + chosenValue + " representan el " + rolAverage + "%.";
-
-  };
+};
 
 
 
@@ -89,5 +87,5 @@ bestAttributes.addEventListener("change",ShowBestChampions); // Llamado de event
 buttonSearchName.addEventListener("click",SearchChampion); // Llamado evento de botón para buscar por nombre de campeón
 selectRol.addEventListener("change",ShowByRol);//Llamado de evento de selector para ordenar por rol
 optionToOrder.addEventListener("change",ord); //Llamado de evento de selector para ordenar de la A a la Z y viceversa
-selectRol.addEventListener("change",prom1);
+
 
