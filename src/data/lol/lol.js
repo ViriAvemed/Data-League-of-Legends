@@ -29,7 +29,7 @@ const LOL = {
         y: 0,
         w: 48,
         h: 48
-    
+
       },
       tags: ["Fighter", "Tank"],
       partype: "BloodWell",
@@ -160,7 +160,7 @@ const LOL = {
         attackspeedperlevel: 3.1
       }
     },
-    
+
     Alistar: {
       version: "6.24.1",
       id: "Alistar",
