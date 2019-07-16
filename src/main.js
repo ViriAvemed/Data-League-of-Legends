@@ -8,7 +8,6 @@ const buttonSearchName = document.getElementById("id-buttonSearchByName"); // Bo
 const deleteDataBox = document.getElementById("id-dataBox"); // Llamado de caja para borrar la data
 const selectRol = document.getElementById("id-filterByRol"); // Selector que filtra por rol
 const bestAttributes = document.getElementById("id-filterByAttribute"); //Selector que filtra por atributo
-
 const optionToOrder  = document.getElementById("id-orderABC"); //Selector que ordena de la A a la Z
 
 
@@ -27,21 +26,16 @@ let printData = (arrayDebug) => {
 
 // Función que permite la búsqueda por nombre de cada campeón
 const SearchChampion = () =>{
-
   let valueBySearch = inputName.value;
-  let newArray = arrayDebug.filter(function (el) {
-    return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
-  });
-  printData(newArray);
+  let printbyname=window.data.campeonesByName(valueBySearch,arrayDebug);
+  printData(printbyname);
 };
 
 // Función que permite el filtrado por rol
 const ShowByRol = () =>{
   let chosenValue = selectRol.value;
-  let newArrayRol = arrayDebug.filter(function (el) {
-    return el.tags[0].indexOf(chosenValue) !== -1;
-  });
-  printData(newArrayRol);
+  let printRol = window.data.searchByRol (chosenValue, arrayDebug);
+  printData(printRol);
 };
 
 
@@ -49,33 +43,22 @@ const ShowByRol = () =>{
 // Función que filtra a los mejores campeones según su atributo
 const ShowBestChampions = () =>{
   let attributes = bestAttributes.value;
-  let newArray=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
-  printData(newArray);
+  let bestChampions= window.data.filterByBestChampions (attributes,arrayDebug);
+  printData(bestChampions);
 
 };
 
 const ord =() => {
-  let sorted = arrayDebug.sort((a, b) => {
     let selectedOption = optionToOrder.value;
-    if (selectedOption === "A" ){
-      return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
-    }
-    else if (selectedOption === "Z" ){
-      return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
-    }
-    });
-  printData(sorted);
+    let orderAZ= window.data.filterbyletter (selectedOption, arrayDebug);
+  printData(orderAZ);
 };
 
 
 const prom1= ()=> {
   let chosenValue = selectRol.value;
-  let newArrayRol = arrayDebug.filter(function (el) {
-    return el.tags[0].indexOf(chosenValue) !== -1;
-  });
-  let rolAverage =newArrayRol.length*100 /134;
-  // return (rolAverage);
-  document.getElementById("id_result").innerHTML = "Sabías que del total de campeones los " + chosenValue + " representan el " + rolAverage + "%.";
+  let calcularProm= window.data.promedio (chosenValue, arrayDebug);
+  document.getElementById("id_result").innerHTML = "Sabías que del total de campeones los " + chosenValue + " representan el " + calcularProm + "%.";
 };
 
 
