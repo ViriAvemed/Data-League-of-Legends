@@ -41,4 +41,49 @@ orderData: (data, selectedOption) => {
     
 });
 },
+
+campeonesByName: (valueBySearch,arrayDebug ) => {
+
+let newArray = arrayDebug.filter(function (el) {
+  return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
+});
+
+return newArray;
+},
+
+
+searchByRol: (chosenValue, arrayDebug) => {
+let newArrayRol = arrayDebug.filter(function (el) {
+  return el.tags[0].indexOf(chosenValue) !== -1;
+});
+return newArrayRol;
+},
+
+filterByBestChampions: (attributes,arrayDebug) =>{
+let bestChampions=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
+return bestChampions;
+},
+
+
+filterbyletter:(selectedOption, arrayDebug) => {
+let orderletter = arrayDebug.sort ((a, b) => {
+if (selectedOption === "A" ){
+  return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
+}
+else if (selectedOption === "Z" ){
+  return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
+}
+});
+return orderletter;
+},
+
+promedio: (chosenValue, arrayDebug) =>{
+  let newArrayRol = arrayDebug.filter(function (el) {
+    return el.tags[0].indexOf(chosenValue) !== -1;
+  });
+  let rolAverage =newArrayRol.length*100 /134;
+  let promRound= Math.round(rolAverage);
+  return (promRound);
+},
+
 };
