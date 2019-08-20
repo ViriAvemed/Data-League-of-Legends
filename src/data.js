@@ -38,7 +38,7 @@ orderData: (data, selectedOption) => {
     }
     }  
     return ordered;
-    
+
 });
 },
 
@@ -47,8 +47,7 @@ campeonesByName: (valueBySearch,arrayDebug ) => {
 let newArray = arrayDebug.filter(function (el) {
   return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
 });
-
-return newArray;
+  newArray();
 },
 
 
@@ -56,12 +55,12 @@ searchByRol: (chosenValue, arrayDebug) => {
 let newArrayRol = arrayDebug.filter(function (el) {
   return el.tags[0].indexOf(chosenValue) !== -1;
 });
-return newArrayRol;
+newArrayRol ();
 },
 
 filterByBestChampions: (attributes,arrayDebug) =>{
 let bestChampions=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
-return bestChampions;
+bestChampions();
 },
 
 
@@ -74,7 +73,7 @@ else if (selectedOption === "Z" ){
   return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
 }
 });
-return orderletter;
+orderletter();
 },
 
 promedio: (chosenValue, arrayDebug) =>{
