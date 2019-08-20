@@ -39,7 +39,6 @@ const ShowByRol = () =>{
 };
 
 
-
 // Función que filtra a los mejores campeones según su atributo
 const ShowBestChampions = () =>{
   let attributes = bestAttributes.value;
