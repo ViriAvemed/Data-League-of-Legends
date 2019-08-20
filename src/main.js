@@ -1,4 +1,4 @@
-// const LOL = window.LOL=LOL;
+const LOL = window.LOL=LOL;
 const arrayDebug = window.data.debugData(LOL.data); // Variable que contiene la data depurada 
 // const ord = window.data.ord (LOL.data);
 // const orderChampions =window.data.orderChampions (LOL.data);
@@ -60,11 +60,6 @@ const prom1= ()=> {
   let calcularProm= window.data.promedio (chosenValue, arrayDebug);
   document.getElementById("id_result").innerHTML = "Sabías que del total de campeones los " + chosenValue + " representan el " + calcularProm + "%.";
 };
-
-
-
-
-
 
 bestAttributes.addEventListener("change",ShowBestChampions); // Llamado de evento de selector para seleccionar mejores atributos
 buttonSearchName.addEventListener("click",SearchChampion); // Llamado evento de botón para buscar por nombre de campeón
