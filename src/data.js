@@ -10,16 +10,15 @@ window.data ={
       let splash = data[i]["splash"];
       let stats = data[i]["stats"];
 
-
       newarrayData.push(
-         {
-           name,
-           title,
-           info,
-           tags,
-           splash,
-           stats
-          });
+        {
+          name,
+          title,
+          info,
+          tags,
+          splash,
+          stats
+        });
     }
   
     console.log (newarrayData[0].info.attack);
@@ -34,8 +33,8 @@ const newArray = arrayDebug.filter(function (el) {
   return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
 });
 
-return newArray;
-},
+     newArray();
+  },
 
 
 
