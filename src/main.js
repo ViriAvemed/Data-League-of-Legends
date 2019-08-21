@@ -1,4 +1,3 @@
-const LOL = window.LOL=LOL;
 const arrayDebug = window.data.debugData(LOL.data); // Variable que contiene la data depurada 
 // const ord = window.data.ord (LOL.data);
 // const orderChampions =window.data.orderChampions (LOL.data);
