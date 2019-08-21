@@ -1,7 +1,5 @@
-// const LOL = window.LOL=LOL;
+
 const arrayDebug = window.data.debugData(LOL.data); // Variable que contiene la data depurada 
-// const ord = window.data.ord (LOL.data);
-// const orderChampions =window.data.orderChampions (LOL.data);
 const inputName = document.getElementById("id-searchByName"); // Variable que llama a la caja de búsqueda por nombre
 const buttonDataBox = document.getElementById("id-dataBox"); // Variable que llama a la caja donde se imprime toda la data
 const buttonSearchName = document.getElementById("id-buttonSearchByName"); // Botón para ejecutar la búsqueda por nombre
@@ -9,6 +7,7 @@ const deleteDataBox = document.getElementById("id-dataBox"); // Llamado de caja 
 const selectRol = document.getElementById("id-filterByRol"); // Selector que filtra por rol
 const bestAttributes = document.getElementById("id-filterByAttribute"); //Selector que filtra por atributo
 const optionToOrder  = document.getElementById("id-orderABC"); //Selector que ordena de la A a la Z
+
 
 
 
@@ -37,7 +36,6 @@ const ShowByRol = () =>{
   let printRol = window.data.searchByRol (chosenValue, arrayDebug);
   printData(printRol);
 };
-
 
 
 // Función que filtra a los mejores campeones según su atributo
