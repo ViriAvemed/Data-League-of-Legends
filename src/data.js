@@ -10,80 +10,63 @@ window.data ={
       let splash = data[i]["splash"];
       let stats = data[i]["stats"];
 
-
       newarrayData.push(
-         {
-           name,
-           title,
-           info,
-           tags,
-           splash,
-           stats
-          });
+        {
+          name,
+          title,
+          info,
+          tags,
+          splash,
+          stats
+        });
     }
-  
+
     return (newarrayData);
-},
-
-orderData: (data, selectedOption) => {
-  
-  let ordered = data.sort((a, b) => {
-    if(selectedOption === 'A'){
-    if (a.name > b.name) {
-      return 1;
-    }
-    }
-    else if (selectedOption === 'Z'){
-      if (a.name < b.name) {
-      return -1;
-    }
-    }  
-    return ordered;
-
-});
-},
-
-campeonesByName: (valueBySearch,arrayDebug ) => {
-
-let newArray = arrayDebug.filter(function (el) {
-  return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
-});
-  newArray();
-},
+  },
 
 
-searchByRol: (chosenValue, arrayDebug) => {
-let newArrayRol = arrayDebug.filter(function (el) {
-  return el.tags[0].indexOf(chosenValue) !== -1;
-});
-newArrayRol ();
-},
+  campeonesByName: (valueBySearch,arrayDebug ) => {
 
-filterByBestChampions: (attributes,arrayDebug) =>{
-let bestChampions=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
-bestChampions();
-},
+    const newArray = arrayDebug.filter(function (el) {
+      return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
+    });
+
+     newArray();
+  },
 
 
-filterbyletter:(selectedOption, arrayDebug) => {
-let orderletter = arrayDebug.sort ((a, b) => {
-if (selectedOption === "A" ){
-  return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
-}
-else if (selectedOption === "Z" ){
-  return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
-}
-});
-orderletter();
-},
+  searchByRol: (chosenValue, arrayDebug) => {
+    const newArrayRol = arrayDebug.filter(function (el) {
+      return el.tags[0].indexOf(chosenValue) !== -1;
+    });
+    return newArrayRol;
+  },
 
-promedio: (chosenValue, arrayDebug) =>{
-  let newArrayRol = arrayDebug.filter(function (el) {
-    return el.tags[0].indexOf(chosenValue) !== -1;
-  });
-  let rolAverage =newArrayRol.length*100 /134;
-  let promRound= Math.round(rolAverage);
-  return (promRound);
-},
+  filterByBestChampions: (attributes,arrayDebug) =>{
+    const bestChampions=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
+    return bestChampions;
+  },
+
+
+  filterbyletter:(selectedOption, arrayDebug) => {
+    let orderletter = arrayDebug.sort ((a, b) => {
+      if (selectedOption === "A" ){
+        return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
+      }
+      else if (selectedOption === "Z" ){
+        return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
+      }
+    });
+    return orderletter;
+  },
+
+  promedio: (chosenValue, arrayDebug) =>{
+    const newArrayRol = arrayDebug.filter(function (el) {
+      return el.tags[0].indexOf(chosenValue) !== -1;
+    });
+    let rolAverage =newArrayRol.length*100 /134;
+    let promRound= Math.round(rolAverage);
+    return (promRound);
+  },
 
 };
