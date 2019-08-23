@@ -1,4 +1,3 @@
-
 const arrayDebug = window.data.debugData(LOL.data); // Variable que contiene la data depurada 
 const inputName = document.getElementById("id-searchByName"); // Variable que llama a la caja de búsqueda por nombre
 const buttonDataBox = document.getElementById("id-dataBox"); // Variable que llama a la caja donde se imprime toda la data
@@ -7,7 +6,6 @@ const deleteDataBox = document.getElementById("id-dataBox"); // Llamado de caja 
 const selectRol = document.getElementById("id-filterByRol"); // Selector que filtra por rol
 const bestAttributes = document.getElementById("id-filterByAttribute"); //Selector que filtra por atributo
 const optionToOrder  = document.getElementById("id-orderABC"); //Selector que ordena de la A a la Z
-
 
 
 
@@ -24,49 +22,59 @@ let printData = (arrayDebug) => {
 
 
 // Función que permite la búsqueda por nombre de cada campeón
-const SearchChampion = () =>{
-  let valueBySearch = inputName.value;
+const SearchChampion = (ev,arrayDebug) =>{
+  let valueBySearch = ev.target.value;
   let printbyname=window.data.campeonesByName(valueBySearch,arrayDebug);
   printData(printbyname);
 };
 
 // Función que permite el filtrado por rol
-const ShowByRol = () =>{
-  let chosenValue = selectRol.value;
-  let printRol = window.data.searchByRol (chosenValue, arrayDebug);
+const ShowByRol = (ev,arrayDebug) =>{
+  let chosenValue = ev.target.value;
+  let printRol = window.data.searchByRol(chosenValue, arrayDebug);
   printData(printRol);
 };
 
 
 // Función que filtra a los mejores campeones según su atributo
-const ShowBestChampions = () =>{
-  let attributes = bestAttributes.value;
-  let bestChampions= window.data.filterByBestChampions (attributes,arrayDebug);
+const ShowBestChampions = (ev,arrayDebug) =>{
+  let attributes = ev.target.value;
+  let bestChampions= window.data.filterByBestChampions(attributes,arrayDebug);
   printData(bestChampions);
 
 };
 
-const ord =() => {
-    let selectedOption = optionToOrder.value;
-    let orderAZ= window.data.filterbyletter (selectedOption, arrayDebug);
+const ord =(ev,arrayDebug) => {
+    let selectedOption = ev.target.value;
+    let orderAZ= window.data.filterbyletter(selectedOption, arrayDebug);
   printData(orderAZ);
 };
 
 
-const prom1= ()=> {
-  let chosenValue = selectRol.value;
-  let calcularProm= window.data.promedio (chosenValue, arrayDebug);
+const prom1= (ev,arrayDebug)=> {
+  let chosenValue = ev.target.value;
+  let calcularProm= window.data.promedio(chosenValue, arrayDebug);
   document.getElementById("id_result").innerHTML = "Sabías que del total de campeones los " + chosenValue + " representan el " + calcularProm + "%.";
 };
 
-
-
-
-
-
 bestAttributes.addEventListener("change",ShowBestChampions); // Llamado de evento de selector para seleccionar mejores atributos
 buttonSearchName.addEventListener("click",SearchChampion); // Llamado evento de botón para buscar por nombre de campeón
-selectRol.addEventListener("change",ShowByRol);//Llamado de evento de selector para ordenar por rol
-optionToOrder.addEventListener("change",ord); //Llamado de evento de selector para ordenar de la A a la Z y viceversa
-selectRol.addEventListener("change", prom1);
+// selectRol.addEventListener("change",ShowByRol);//Llamado de evento de selector para ordenar por rol
+// optionToOrder.addEventListener("change",ord); //Llamado de evento de selector para ordenar de la A a la Z y viceversa
+// selectRol.addEventListener("change", prom1);
 
+
+
+  fetch('./data/lol/lol.json')
+  .then((response) => {
+  return response.json();
+  })
+  .then(obj =>{
+    const debugData =obj.lol;          
+    selectRol.addEventListener("change", (ev) => ShowByRol(ev,debugData));//Llamado de evento de selector para ordenar por rol
+    optionToOrder.addEventListener("change",(ev) => ord(ev,arrayDebug)); //Llamado de evento de selector para ordenar de la A a la Z y viceversa
+    selectRol.addEventListener("change", (ev) => prom1(ev,arrayDebug));
+    printData(arrayDebug);
+  })
+  .catch (() => console.error('existe un error'));
+  
