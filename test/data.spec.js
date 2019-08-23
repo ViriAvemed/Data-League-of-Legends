@@ -1,8 +1,18 @@
 require('../src/data.js');
-// const LOL =require('../src/data/lol/lol.js');
-// const newarrayData =window.data.debugData;
-// console.log(newarrayData);
-// const arrayDebug =window.data.arrayDebug;
+
+// const newarrayData = window.data.debugData;
+
+const arrayDebug = window.data.arrayDebug;
+
+
+//Test de funcion
+describe('debugData', ()=>{
+  it('Deberìa ser una función', () =>{
+    expect(typeof debugData).toBe('function');
+  });
+});
+
+//Test que ordena la data de forma ascendente y descendente
 const filterbyletter = window.data.filterbyletter;
 
 const input = [{name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank']},
@@ -34,4 +44,16 @@ describe('filterbyletter', ()=>{
   });
 
   });
+
+//Test que trae el valor max
+
+describe('filterByBestChampions', ()=>{
+  it('Deberìa ser una función', () =>{
+    expect(typeof filterByBestChampions).toBe('function');
+    // console.log(debugData);
+  });
+  it('debería retornar a los mejores en ataque', () =>{
+    expect(filterByBestChampions('attack',input).toBe(input));
+  });
+});
 
