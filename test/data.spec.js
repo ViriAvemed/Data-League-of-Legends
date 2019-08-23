@@ -4,6 +4,7 @@ require('../src/data.js');
 // console.log(newarrayData);
 // const arrayDebug =window.data.arrayDebug;
 const filterbyletter = window.data.filterbyletter;
+const filterByBestChampions = window.data.filterByBestChampions;
 
 const input = [{name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank']},
   {name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, tags: ['Support', 'Mage']},
@@ -35,3 +36,12 @@ describe('filterbyletter', ()=>{
 
   });
 
+describe('filterByBestChampions', ()=>{
+  it('Deberìa ser una función', () =>{
+    expect(typeof filterByBestChampions).toBe('function');
+    // console.log(debugData);
+  });
+  it('debería retornar a los mejores en ataque', () =>{
+    expect(filterByBestChampions('attack',input).toEqual(output2));
+  });
+});
