@@ -20,17 +20,18 @@ window.data ={
           stats
         });
     }
-  
-    console.log (newarrayData[0].info.attack);
+    // console.log (debugData(data));
     return newarrayData;
+    
 },
 
 
 
 
+
 campeonesByName: (valueBySearch,arrayDebug ) => {
-const newArray = arrayDebug.filter(function (el) {
-  return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
+const newArray = arrayDebug.filter((ev) =>{
+  return ev.name.toLowerCase().indexOf(valueBySearch) !== -1;
 });
 
      newArray();
@@ -39,14 +40,14 @@ const newArray = arrayDebug.filter(function (el) {
 
 
 searchByRol: (chosenValue, arrayDebug) => {
-const newArrayRol = arrayDebug.filter(function (el) {
-  return el.tags[0].indexOf(chosenValue) !== -1;
+const newArrayRol = arrayDebug.filter( (ev) => {
+  return ev.tags[0].indexOf(chosenValue) !== -1;
 });
 return newArrayRol;
 },
 
 filterByBestChampions: (attributes,arrayDebug) =>{
-const bestChampions=arrayDebug.filter (arrayDebug => arrayDebug.info[attributes] >9);
+const bestChampions=arrayDebug.filter(arrayDebug => arrayDebug.info[attributes] > 9);
 return bestChampions;
 },
 
@@ -73,4 +74,3 @@ promedio: (chosenValue, arrayDebug) =>{
 },
 
 };
-
