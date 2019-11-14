@@ -21,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anabahena/MEX-Data-Lovers-008.git"
+    "url": "git+https://github.com/ViriAvemed/Data-League-of-Legends"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/anabahena/MEX-Data-Lovers-008/issues"
+    "url": "https://github.com/ViriAvemed/Data-League-of-Legends/issues"
   },
-  "homepage": "https://github.com/anabahena/MEX-Data-Lovers-008#readme",
+  "homepage": "https://github.com/ViriAvemed/Data-League-of-Legends#readme",
   "devDependencies": {
     "cross-env": "^5.2.0"
   }
