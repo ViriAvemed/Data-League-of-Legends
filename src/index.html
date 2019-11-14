@@ -16,60 +16,55 @@
 
 <body>
 
-<div class="container"></div>
-<div class="row"></div>
-
-
-<header class="styleHeader">
-    <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends"  class="styleLogo" onclick="window.location.reload();">
-  <h1 class="styleTittleHeader">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
-</header>
-<section class="container"></section>
-<section id="id-navigationBar" class="styleNavigationBar">
-  <label for="id-filterByAttribute"></label><select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
-    <option selected>LOS MEJORES</option>
-    <option value="attack" id="id-attack">Ataque</option>
-    <option value="defense" id="id-defense">Defensa</option>
-    <option value="difficulty" id="id-difficulty">Dificultad</option>
-    <option value="magic" id="id-magic">Magia</option>
-  </select>
-  <label for="id-filterByRol"></label><select name="filterByRol" id="id-filterByRol" class="styleFilters">
-    <option selected value="0">ROL</option>
-    <option id="id-assassin" value="Assassin">Asesino</option>
-    <option id="id-magician" value="Mage">Mago</option>
-    <option id="id-fighter" value="Fighter">Luchador</option>
-    <option id="id-support" value="Support">Soporte</option>
-    <option id="id-tank" value="Tank">Tanque</option>
-    <option id="id-marksman" value="Marksman">Tirador</option>
-  </select>
-  <label for="id-orderABC"></label><select name="orderABC" id="id-orderABC" class="styleFilters">
-    <option selected value="Orden">ORDENAR</option>
-    <option value="A">A-Z</option>
-    <option value="Z">Z-A</option>
-  </select>
-  <label for="id-searchByName"></label><input type="segitarch" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="BUSCAR CAMPEÓN...">
-  <button id="id-buttonSearchByName" class="searchIcon"><img src="IMG/search.png" alt="Buscar"></button>
-
-</section>
-
-
-<section id="id_result" class="result" >
-</section>
-<section id="id-dataBox">
-  <div id="homeVideo" class="videoHome">
-    <video autoplay loop preload="auto" class="videoHomeSon" src="IMG/irelia.mp4" type="video/mp4"></video>
-  </div>
-</section>
-
-
-<script src="./data/lol/lol.js"></script>
-<script src="data.js"></script>
-<script src="main.js"></script>
-
-<footer class="footer">
+  <div class="container"></div>
+  <div class="row"></div>
+  <header class="styleHeader">
+      <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends"  class="styleLogo" onclick="window.location.reload();">
+      <h1 class="styleTittleHeader">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
+  </header>
+  <section class="container"></section>
+  <section id="id-navigationBar" class="styleNavigationBar">
+    <label for="id-filterByAttribute"></label><select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
+      <option selected>LOS MEJORES</option>
+      <option value="attack" id="id-attack">Ataque</option>
+      <option value="defense" id="id-defense">Defensa</option>
+      <option value="difficulty" id="id-difficulty">Dificultad</option>
+      <option value="magic" id="id-magic">Magia</option>
+    </select>
+    <label for="id-filterByRol"></label><select name="filterByRol" id="id-filterByRol" class="styleFilters">
+      <option selected value="0">ROL</option>
+      <option id="id-assassin" value="Assassin">Asesino</option>
+      <option id="id-magician" value="Mage">Mago</option>
+      <option id="id-fighter" value="Fighter">Luchador</option>
+      <option id="id-support" value="Support">Soporte</option>
+      <option id="id-tank" value="Tank">Tanque</option>
+      <option id="id-marksman" value="Marksman">Tirador</option>
+    </select>
+    <label for="id-orderABC"></label><select name="orderABC" id="id-orderABC" class="styleFilters">
+      <option selected value="Orden">ORDENAR</option>
+      <option value="A">A-Z</option>
+      <option value="Z">Z-A</option>
+    </select>
+    <label for="id-searchByName"></label><input type="text" autocomplete="off" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="BUSCAR CAMPEÓN...">
+    <button id="id-buttonSearchByName" class="searchIcon"><img src="IMG/search.png" alt="Buscar"></button>
+  </section>
+  <section id="id_result" class="result" >
+  </section>
+  <section id="id-dataBox">
+    <div id="homeVideo" class="videoHome">
+      <video autoplay loop preload="auto" class="videoHomeSon" src="IMG/irelia.mp4" type="video/mp4"></video>
+    </div>
+  </section>
+  <footer class="footer">
     <p>Copyright © 2019 </p>
-</footer>
+  </footer>
 
+
+
+<!--  SCRIPTS-->
+  <script src="./data/lol/lol.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
 
