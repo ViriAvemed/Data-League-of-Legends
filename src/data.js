@@ -1,7 +1,7 @@
 window.data ={
 // Función que depura la data y solo hace el llamado de la data solicitada
   debugData: (data) => {
-    const newarrayData = [];
+    let newarrayData = [];
     for(let i in data ){
       let name = data[i]["name"];
       let title = data[i]["title"];
@@ -11,61 +11,68 @@ window.data ={
       let stats = data[i]["stats"];
 
       newarrayData.push(
-        {
-          name,
-          title,
-          info,
-          tags,
-          splash,
-          stats
-        });
+         {
+           name,
+           title,
+           info,
+           tags,
+           splash,
+           stats
+          });
     }
-    // console.log (debugData(data));
-    return newarrayData;
-    
+
+    return (newarrayData);
 },
 
+orderData: (data, selectedOption) => {
 
+  let ordered = data.sort((a, b) => {
+    if(selectedOption === 'A'){
+    if (a.name > b.name) {
+      return 1;
+    }
+    }
+    else if (selectedOption === 'Z'){
+      if (a.name < b.name) {
+      return -1;
+    }
+    }
+    return ordered;
 
-
+});
+},
 
 campeonesByName: (valueBySearch,arrayDebug ) => {
-const newArray = arrayDebug.filter((ev) =>{
-  return ev.name.toLowerCase().indexOf(valueBySearch) !== -1;
+
+  return arrayDebug.filter(function (el) {
+  return el.name.toLowerCase().indexOf(valueBySearch) !== -1;
 });
-
-     newArray();
-  },
-
+},
 
 
 searchByRol: (chosenValue, arrayDebug) => {
-const newArrayRol = arrayDebug.filter( (ev) => {
-  return ev.tags[0].indexOf(chosenValue) !== -1;
+  return arrayDebug.filter(function (el) {
+  return el.tags[0].indexOf(chosenValue) !== -1;
 });
-return newArrayRol;
 },
 
 filterByBestChampions: (attributes,arrayDebug) =>{
-const bestChampions=arrayDebug.filter(arrayDebug => arrayDebug.info[attributes] > 9);
-return bestChampions;
+  return arrayDebug.filter(arrayDebug => arrayDebug.info[attributes] > 9);
 },
 
 
 filterbyletter:(selectedOption, arrayDebug) => {
-const orderletter = arrayDebug.sort((a, b) => {
-if (selectedOption === "A" ){
-  return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
-}
-else if (selectedOption === "Z" ){
-  return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
-}
+  return arrayDebug.sort((a, b) => {
+  if (selectedOption === "A") {
+    return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
+  } else if (selectedOption === "Z") {
+    return ((a.name > b.name) ? -1 : ((a.name < b.name) ? 1 : 0));
+  }
 });
-return orderletter;
 },
 
 promedio: (chosenValue, arrayDebug) =>{
-  const newArrayRol = arrayDebug.filter(function (el) {
+  let newArrayRol = arrayDebug.filter(function (el) {
     return el.tags[0].indexOf(chosenValue) !== -1;
   });
   let rolAverage =newArrayRol.length*100 /134;

@@ -1,5 +1,4 @@
 const LOL = {
-
   type: "champion",
   format: "standAloneComplex",
   version: "6.24.1",

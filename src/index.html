@@ -8,48 +8,33 @@
   <title>THE BEST CHAMPIONS</title>
   <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Convergence|Forum|Francois+One|Gurajada|Patua+One|Secular+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="pantalla.css">   -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(window).load(function() {
-      $(".loader").fadeOut("slow");
-    });
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 
-  </script>
 
-  
+
 </head>
 
 <body>
 
-  <div class="container"></div>
-  <div class="row"></div>
-  <section class="loader"></section>
+<div class="container"></div>
+<div class="row"></div>
 
 
-<div class="styleHeader">
-  <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends" class="styleLogo" >
+<header class="styleHeader">
+    <img src="imagenes/logo.jpg" id="id-headLogo" alt="Logo League of Legends"  class="styleLogo" onclick="window.location.reload();">
   <h1 class="styleTittleHeader">LOS MEJORES CAMPEONES DE LEAGUE OF LEGENDS</h1>
-
-</div>
-
+</header>
 <section class="container"></section>
-
-
-<div id="id-navigationBar" class="styleNavigationBar">
-
-  <select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
-    <option selected>Mejores Campeones</option>
+<section id="id-navigationBar" class="styleNavigationBar">
+  <label for="id-filterByAttribute"></label><select name="filterByAttribute" id="id-filterByAttribute" class="styleFilters">
+    <option selected>LOS MEJORES</option>
     <option value="attack" id="id-attack">Ataque</option>
     <option value="defense" id="id-defense">Defensa</option>
     <option value="difficulty" id="id-difficulty">Dificultad</option>
     <option value="magic" id="id-magic">Magia</option>
   </select>
-
-  <select name="filterByRol" id="id-filterByRol" class="styleFilters">
-    <option selected value="0">Rol</option>
+  <label for="id-filterByRol"></label><select name="filterByRol" id="id-filterByRol" class="styleFilters">
+    <option selected value="0">ROL</option>
     <option id="id-assassin" value="Assassin">Asesino</option>
     <option id="id-magician" value="Mage">Mago</option>
     <option id="id-fighter" value="Fighter">Luchador</option>
@@ -57,33 +42,34 @@
     <option id="id-tank" value="Tank">Tanque</option>
     <option id="id-marksman" value="Marksman">Tirador</option>
   </select>
-
-  <select name="orderABC" id="id-orderABC" class="styleFilters">
-    <option selected value="Orden">Orden</option>
+  <label for="id-orderABC"></label><select name="orderABC" id="id-orderABC" class="styleFilters">
+    <option selected value="Orden">ORDENAR</option>
     <option value="A">A-Z</option>
     <option value="Z">Z-A</option>
   </select>
+  <label for="id-searchByName"></label><input type="search" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="BUSCAR CAMPEÓN...">
+  <button id="id-buttonSearchByName" class="searchIcon"><img src="IMG/search.png" alt="Buscar"></button>
 
-  <input type="search" id="id-searchByName" name="Buscar" class="nameOfChampion" placeholder="Nombre del campeón">
-  <button id="id-buttonSearchByName" class="btnsearch" >IR</button>
-</div>
+</section>
 
 
-
-<section id="id_result" class="result" > </section>
-<div id="id-dataBox"></div>
+<section id="id_result" class="result" >
+</section>
+<section id="id-dataBox">
+  <div id="homeVideo" class="videoHome">
+    <video autoplay loop preload="auto" class="videoHomeSon" src="IMG/irelia.mp4" type="video/mp4"></video>
+  </div>
+</section>
 
 
 <script src="./data/lol/lol.js"></script>
 <script src="data.js"></script>
 <script src="main.js"></script>
 
-<footer class="footer">By Viridiana Avellaneda & Ana Luisa
-
+<footer class="footer">
+    <p>Copyright © 2019 </p>
 </footer>
 
 </body>
-
-
 </html>
 
