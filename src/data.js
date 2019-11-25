@@ -1,3 +1,12 @@
+// const url= ('http://ddragon.leagueoflegends.com/cdn/9.3.1/data/en_US/champion.json');
+// fetch(url)
+//   .then(response =>response.json())
+//   .then(data => {
+//   console.log(data);
+// })
+//   .catch(err=> console.log(err));
+
+
 window.data ={
 // Función que depura la data y solo hace el llamado de la data solicitada
   debugData: (data) => {
@@ -81,3 +90,5 @@ window.data ={
   }
 
 };
+
+
